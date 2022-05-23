@@ -1,0 +1,125 @@
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+.index {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f7f7e8;
+    height: 48px;
+}
+
+#Navigation_desktop {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1600px !important;
+    width: 70%;
+    float: left;
+}
+
+#Navigation_desktop li a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+  
+#Navigation_desktop li{
+    float: left;
+}
+
+#Navigation_desktop a:hover{
+    background-color: antiquewhite;
+}
+
+.Navigation_desktop_active{
+    background-color: antiquewhite;
+}
+
+.Avatar{
+    vertical-align:auto;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+}
+
+#Navigation_mobile {
+    display:none;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+.hamburgericon {
+    display: none !important;
+}
+
+#linkies {
+    list-style-type: none;
+    position: absolute;
+    background-color: #f7f7e8;
+    display: none;
+    width: 100%;
+    margin-top: -2px;
+    z-index: 100;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+@media (max-width: 950px) {
+    #Navigation_desktop {
+        display: none;
+    }
+
+    #Navigation_mobile {
+        display: block;
+    }
+
+    .hamburgericon {
+        display: block !important;
+    }
+}
+
+.index a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+  
+.index a.icon {
+    background: #f7f7e8;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 16px 20px;
+}
+
+.index a.Avatar2{
+    display: flex;
+    justify-content: center;
+    background: #f7f7e8;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+}
+  
+.index a:hover {
+    background-color: antiquewhite;
+    color: black;
+}
+
+.On_hover_off:hover{
+    background-color: #f7f7e8 !important;
+}
