@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link rel="stylesheet" href="Css/indexstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Byte by Byte</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    <div class="index">
+        <ul id="Navigation_desktop">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="Navigation_desktop_active" href="recipes.html">Recipes</a></li>
+            <li><a href="Dishes.html">Dishes</a></li>
+            <li><a href="About_us.html">About us</a></li>
+            <li style="float:right"><a>Log in</a></li>
+            <li style="float:right"><a><img src="Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>
+        </ul>
+    
+        <div id="Navigation_mobile">
+
+            <a href="javascript:void(0);" class="icon hamburgericon" onclick="showTHINGIEYESPLEASAE()">
+                <i class="fa fa-bars"></i></a>
+                <a class="On_hover_off">Recipes</a>
+                <div class="Avater_mobile">
+                    <a class="Avatar2"><img src="Pictures/index/Basic_profilepicture.png" alt="Profiel foto"></a>
+                </div>
+
+            <script>
+                function showTHINGIEYESPLEASAE(){
+                var menu = document.getElementById('linkies')
+                if (menu.style.display === 'block'){
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block'
+                    }
+                }
+            </script>
+        
+        </div>
+
+        <div id="linkies">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dishes.html">Dishes</a></li>
+            <li><a href="About_us.html">About us</a></li>
+        </div>
+    </div>
+</body>
+
+</html>
