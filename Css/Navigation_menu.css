@@ -1,27 +1,85 @@
 body{
     padding: 0;
     margin: 0;
-
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1500px !important;
+    width: 100%;
 }
 
 .index {
     width: 100%;
     overflow: hidden;
     background-color: #f7f7e8;
-    height: 48px;
+    height: 70px;
 }
 
-#Navigation_desktop {
+.Navbar_left {
     list-style-type: none;
-    margin: 0;
+    margin-top: 0;
+    margin-left: -40px;
     padding: 0;
     float: left;
+    text-align: center;
+    
+}
+
+.Navbar_right{
+    list-style-type: none;
+    padding: 0;
+    float: right;
+}
+
+.Logo{
+    margin-top: -10px;
+    width: 75px;
+    height: 60px;
+}
+
+.Logo a:hover{
+    background-color: none !important;
+}
+
+.Search{
+    margin-right: 80px;
+    margin-top: -2;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    height: 40px;
+    border-radius: 60px;
+}
+
+.Search_bar{
+    border: none;
+    width: 350px;
+    height: 30px;
+    outline: none !important;
+    margin-left: 10px;
+    margin-top: 5;
+}
+
+.Search button{
+    border: none;
+    height: 30px;
+    width: 30px;
+    margin-top: -1px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.Search button:hover{
+    cursor: pointer;
 }
 
 #Navigation_desktop li a{
     display: block;
-    text-align: center;
+    height: 70px;
+    margin-top: -16px;
     text-decoration: none;
+    line-height: 39px;
+    font-size: 20px;
 }
   
 #Navigation_desktop li{
@@ -37,10 +95,11 @@ body{
 }
 
 .Avatar{
-    vertical-align:auto;
-    width: 19px;
-    height: 19px;
+    vertical-align: auto;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
+    margin-top: 4px;
 }
 
 #Navigation_mobile {
@@ -67,7 +126,7 @@ body{
     text-decoration: none;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1170px) {
     #Navigation_desktop {
         display: none;
     }
@@ -78,6 +137,12 @@ body{
 
     .hamburgericon {
         display: block !important;
+    }
+    .index{
+        width: 100%;
+        overflow: hidden;
+        background-color: #f7f7e8;
+        height: 48px !important;
     }
 }
 
@@ -98,7 +163,7 @@ body{
     padding: 16px 20px;
 }
 
-.index a.Avatar2{
+.index a.Avatar_mobile{
     display: flex;
     justify-content: center;
     background: #f7f7e8;
@@ -107,9 +172,19 @@ body{
     top: 0;
     width: 19px;
     height: 19px;
-    border-radius: 50%;
 }
   
+.index a.Shopping_cart_mobile{
+    display: flex;
+    justify-content: center;
+    background: #f7f7e8;
+    position: absolute;
+    right: 50px;
+    top: 0;
+    width: 19px;
+    height: 19px;
+}
+
 .index a:hover {
     background-color: antiquewhite;
     color: black;
