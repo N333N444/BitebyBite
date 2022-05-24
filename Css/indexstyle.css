@@ -15,11 +15,6 @@ body{
     list-style-type: none;
     margin: 0;
     padding: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 1600px !important;
-    width: 70%;
     float: left;
 }
 

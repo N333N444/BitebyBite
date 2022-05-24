@@ -10,12 +10,22 @@
 <body>
     <div class="index">
         <ul id="Navigation_desktop">
-            <li><a class="Navigation_desktop_active" href="index.html">Home</a></li>
-            <li><a href="Recipes.html">Recipes</a></li>
-            <li><a href="Dishes.html">Dishes</a></li>
-            <li><a href="About_us.html">About us</a></li>
-            <li style="float:right;"><a>Log in</a></li>
-            <li style="float:right;"><a><img src="Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>
+            <div class="Navbar_left">
+                <li><a class="Navigation_desktop_active" href="index.html">Home</a></li>
+                <li><a href="Recipes.html">Recipes</a></li>
+                <li><a href="Dishes.html">Dishes</a></li>
+                <li><a href="About_us.html">About us</a></li>
+            </div>
+            <div class="Navbar_Right">
+                <li style="float:right;"><a><img src="Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>
+                <li style="float: right;">
+                    <form class="Search2">
+                        <input type="text" placeholder="Search" class="Search_bar">
+                        <button type="button"><i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </li>
+            </div>
         </ul>
     
         <div id="Navigation_mobile">
