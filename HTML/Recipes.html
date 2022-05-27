@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="stylesheet" href="/Css/Navigation_menu.css">
+    <link rel="stylesheet" href="../Css/Navigation_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Byte by Byte</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -10,21 +10,35 @@
 <body>
     <div class="index">
         <ul id="Navigation_desktop">
-            <li><a href="../index.html">Home</a></li>
-            <li><a class="Navigation_desktop_active" href="recipes.html">Recipes</a></li>
-            <li><a href="Dishes.html">Dishes</a></li>
-            <li><a href="About_us.html">About us</a></li>
-            <li style="float:right"><a>Log in</a></li>
-            <li style="float:right"><a><img src="Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>
+            <div class="Navbar_left">
+                <li><a href="../index.html"><img src="../Pictures/index/leeg_logo.png" class="Logo"></a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a class="Navigation_desktop_active" href="Recipes.html">Recipes</a></li>
+                <li><a href="Dishes.html">Dishes</a></li>
+                <li><a href="About_us.html">About us</a></li>
+            </div>
+            <div class="Navbar_right">
+                <li style="float:right;"><a href="../PHP/Log_in.php">Log in</a></li>
+                <li style="float:right;"><a href=""><img src="../Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>
+                <li style="float: right;"><a href="" class="Shopping_cart"><i class='fa fa-shopping-cart' style='color:#939393; font-size: 30px; margin-top: 4px;'></i></a></li>
+                <li style="float: right;">
+                    <form action="action.php" class="Search" >
+                        <input type="text" placeholder="Search" class="Search_bar">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </li>
+            </div>
         </ul>
-    
         <div id="Navigation_mobile">
-
             <a href="javascript:void(0);" class="icon hamburgericon" onclick="showTHINGIEYESPLEASAE()">
                 <i class="fa fa-bars"></i></a>
                 <a class="On_hover_off">Recipes</a>
+                <div class="Shopping_cart_mobile">   
+                    <a href="" class="Shopping_cart_mobile"><i class='fa fa-shopping-cart' style='color:#939393;'></i></a>
+                </div>
                 <div class="Avater_mobile">
-                    <a class="Avatar2"><img src="Pictures/index/Basic_profilepicture.png" alt="Profiel foto"></a>
+                    <a href="" class="Avatar_mobile"><img src="Pictures/index/Basic_profilepicture.png" alt="Profiel foto"></a>
                 </div>
 
             <script>
@@ -39,10 +53,9 @@
             </script>
         
         </div>
-
         <div id="linkies">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="dishes.html">Dishes</a></li>
+            <li><a href="Dishes.html">Dishes</a></li>
             <li><a href="About_us.html">About us</a></li>
         </div>
     </div>
