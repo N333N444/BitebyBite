@@ -9,7 +9,7 @@ c = connection.cursor()
 
 list1 = [(2.30, "Aspergus"),(3.30, "Apples"),(4.50, "Apples")]
 list2 = [("logged_in", "Melvin"),("logged_out", "Nena")]
-
+list3 = [("admin", "Melvin"),]
 
 c.executemany("insert into ingredients values (?,?)", list1)
 
@@ -28,7 +28,7 @@ for i in ingredients:
     if i[1] == "Apples":
         price = i[0]
         adprice = price + 1
-        ingredients[i][0] = [adprice if 3.30]
+        #ingredients[i][0] = ["adprice" if value==3.30]
         print(price)
 
     
