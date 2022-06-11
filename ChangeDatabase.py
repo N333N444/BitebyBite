@@ -1,15 +1,15 @@
 import sqlite3
 
-connection = sqlite3.connect("BitebyBite.db")
+print("**************")
+connection = sqlite3.connect('BitebyBite.db')
 c = connection.cursor()
-
 
 
 def ReadDatabase():
     print("Tables:\ningredients\nuser_status\nuser_password\n\n")
     table = input("Enter your table: ")
     sql = "select * from "
-    for row in c.execute(sql + table):
+    for row in c.execute(sql+table):
         print(row)
 
 def AddIngredient():
@@ -19,6 +19,10 @@ def AddIngredient():
     newproduct = (product, costnm)
     c.execute("insert into ingredients values (?,?)", newproduct)
 
+def ChangePrice():
+    c.execute("select * from ingredients")
+    results = c.fetchall()
+    print(results)
 #print("******")
 #c.execute("select * from ingredients")
 #ingredients = c.fetchall()
@@ -35,9 +39,9 @@ def AddIngredient():
 #        print(price)
 
 
+ReadDatabase()
 
-
-
+ChangePrice()
 
 
 
