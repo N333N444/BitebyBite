@@ -22,13 +22,48 @@ def AddIngredient():
 def ChangePrice():
     c.execute("select * from ingredients")
     results = c.fetchall()
+    #These are our products:
     print(results)
+    productlist = []
+    for i in results:
+        product = i[0]
+        productlist.append(product)
+    print(productlist)
+
+    #Search for your chosen product
+    productselect = input("select a product: ")
+    sql1 = "select * from ingredients where name=:c"
+    sql2 = {"c": productselect}
+    c.execute(sql1, sql2)
+    Productsearch = c.fetchall()
+    currentprice = Productsearch[0][1]
+    print(f"The current price of this product is: {currentprice}")
+    print(Productsearch[0][1])
+    
+    #replace price
+    chosenprice = input("Choose a new price: ")
+    y = list(Productsearch[0])
+    y[1] = chosenprice
+    Productsearch[0] = tuple(y)
+    print(Productsearch) #goede
+
+    #replace in table
+    sql1 = "select * from ingredients where name=:c"
+    sql2 = {"c": productselect}
+    c.execute(sql1, sql2)
+    Productsearch = c.fetchall()
+    c.execute("select * from ingredients")
+    ingredient = c.fetchall()
+    print(ingredient)
+    for i in ingredient:
+        [Productsearch if value==productselect else value for value in i]
+
 
 #print("******")
 #c.execute("select * from ingredients")
 #ingredients = c.fetchall()
 
-#c.execute("select * from ingredients where name=:c", {"c": "Apples"})
+c.execute("select * from ingredients where name=:c", {"c": "Apples"})
 #ApplesSearch = c.fetchall()
 #print(ApplesSearch)
 
@@ -38,9 +73,6 @@ def ChangePrice():
 #        price = i[0]
 #        adprice = price + 1
 #        print(price)
-
-
-ReadDatabase()
 
 ChangePrice()
 
