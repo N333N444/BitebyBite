@@ -43,7 +43,7 @@ def ChangePrice():
     sql2 = {"c": productselect}
     c.execute(sql1, sql2)
     OldProductsearch = c.fetchall() # our tuple [(Aspergus, 2.3)]
-    
+
     currentprice = Productsearch[0][1]
     print(f"The current price of this product is: {currentprice}")
     print(Productsearch)
@@ -51,30 +51,26 @@ def ChangePrice():
     #replace price
     chosenprice = input("Choose a new price: ")
     oldprice = list(Productsearch[0]) #make the the currenct tupple a [Aspergus, 2.3]
-    print("************")
-    print(oldprice)
     oldprice[1] = chosenprice # change the price in the list with the chosenprice [Aspergus, 2.6]
-    print(oldprice)
     NewProductsearch = Productsearch
     NewProductsearch[0] = tuple(oldprice) # change the list back into a tuple [(Aspergus, 2.6)]
-    print("************")
-    print(OldProductsearch)
-    print(NewProductsearch) #goede
-    print("************")
 
     #replace in table
     c.execute("select * from ingredients")
     ingredient = c.fetchall()
-    #print(ingredient)
+    print(ingredient)
+    
     for i in ingredient:
-        [Productsearch if value==productselect else value for value in i]
-
+        
+        print(i)
+        newingredient = [NewProductsearch[0] if value==OldProductsearch[0] else value for value in i]
+        print(newingredient)
 
 #print("******")
 #c.execute("select * from ingredients")
 #ingredients = c.fetchall()
 
-c.execute("select * from ingredients where name=:c", {"c": "Apples"})
+#c.execute("select * from ingredients where name=:c", {"c": "Apples"})
 #ApplesSearch = c.fetchall()
 #print(ApplesSearch)
 
@@ -86,17 +82,8 @@ c.execute("select * from ingredients where name=:c", {"c": "Apples"})
 #        print(price)
 
 ChangePrice()
-
-
-
-
-
-
-
-
-
-
-
+print("You have changed the price")
+ReadDatabase()
 
 
 
