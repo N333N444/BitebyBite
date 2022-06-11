@@ -1,50 +1,21 @@
 import sqlite3
 
 
+#Tables: ingredients, user_status, user_password
+
 connection = sqlite3.connect("BitebyBite.db")
 c = connection.cursor()
-#c.execute("create table ingredients (price real, name text)")
+c.execute("create table ingredients (name text, price real)")
+c.execute("create table user_status (user text, status text)")
+c.execute("create table user_password (user text, password text)")
 
-
-
-list1 = [(2.30, "Aspergus"),(3.30, "Apples"),(4.50, "Apples")]
-list2 = [("logged_in", "Melvin"),("logged_out", "Nena")]
-list3 = [("admin", "Melvin"),]
+#Make the list and put them in a table in the database
+list1 = [("Aspergus", 2.30),("Apples", 3.30),("Apples", 4.50)]
+list2 = [("Melvin", "logged_in"),("Nena", "logged_out")]
+list3 = [("Melvin", "admin"),("Nena","admin")]
 
 c.executemany("insert into ingredients values (?,?)", list1)
-
-for row in c.execute("select * from ingredients"):
-    print(row)
-print("******")
-c.execute("select * from ingredients")
-ingredients = c.fetchall()
-
-c.execute("select * from ingredients where name=:c", {"c": "Apples"})
-ApplesSearch = c.fetchall()
-print(ApplesSearch)
-
-print("**********")
-for i in ingredients:
-    if i[1] == "Apples":
-        price = i[0]
-        adprice = price + 1
-        #ingredients[i][0] = ["adprice" if value==3.30]
-        print(price)
-
-    
-    
-    
-    #if ingredients[i][1] == "Apples":
-    #    ingredients[i][0] = 4.60, "Apples"
-
-
-
-
-
-
-
-
-
-
+c.executemany("insert into user_status values (?,?)", list2)
+c.executemany("insert into user_password values (?,?)", list3)
 
 connection.close()
