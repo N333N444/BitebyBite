@@ -23,6 +23,7 @@ def ChangePrice():
     c.execute("select * from ingredients")
     results = c.fetchall()
     print(results)
+
 #print("******")
 #c.execute("select * from ingredients")
 #ingredients = c.fetchall()
