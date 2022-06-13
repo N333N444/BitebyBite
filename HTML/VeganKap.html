@@ -67,11 +67,34 @@
         Vegan Kapsalon
     </div>
     <div class="Rectangles_Recp" style="left: 800px; top:181px"></div>
-    <div class="Rectangles_Ingre" style="left: 56px; top:640px"></div>
+    <div class="Rectangles_Ingre" style="left: 56px; top:600px"></div>
     <div class="Recipe_text" style= "height:36px; width:150px; left:820px; top:196px">
         Preparation
     </div>
     <div class="Preparation_line" style="width: 642px; left: 800px; top:243px"></div>
+    <div class="Rectangles_Mealbox" style="left: 380px; top:525px"></div>
+    <div class="Rectangles_Persons" style="left: 66px; top:525px"></div>
+    <div class="BoxPer_text" style= "width:94px; left:88px; top:532px">
+        2 Persons
+    </div>
+    <div class="PeopleUp_button" style="left: 244px; top: 532px;">
+        <button onclick="incrementClick()">^</button>
+    </div>
+    <div class="BoxPer_text" style= "width:140px; left:461px; top:530px">
+        Order Mealbox
+    </div>
+    <script>
+        var coutnerVal = 1;
+            function incrementClick() {
+            updateDisplay(++counterVal);
+            print(counterVal)
+            }
+            function updateDisplay(val) {
+            document.getElementById("BoxPer_text").innerHTML = val;
+            }
+    </script>
+    
+</body>
 </body>
 </html>
 
