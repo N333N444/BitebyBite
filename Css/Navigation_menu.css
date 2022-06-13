@@ -297,3 +297,43 @@ body{
     height: 0px;
     border: 1px solid #000000;
 }
+.Rectangles_Mealbox {
+    position: absolute;
+    width: 302px;
+    height: 38px;
+    background: #557174;
+    border-radius: 20px;
+}
+.Rectangles_Persons {
+    position: absolute;
+    width: 228px;
+    height: 42px;
+    background: #557174;
+    border-radius: 20px;
+}
+.BoxPer_text{
+    position: absolute;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.PeopleUp_button{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: #557174;
+}
+#counter-label{
+    position: absolute;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
