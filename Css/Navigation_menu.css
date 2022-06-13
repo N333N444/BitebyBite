@@ -337,3 +337,33 @@ body{
     line-height: 24px;
     color: #FFFFFF;
 }
+.Rectangles_aboutus {
+    position: absolute;
+    left: 30px; 
+    margin-top: 20px;
+    width: 1440px;
+    height: 260px;
+    background-color:#c7cfb7;
+    border-radius: 20px;
+}
+.Rectangles_aboutus2 {
+    
+    width: 650px;
+    height: 325px;
+    background-color: #9DAD7F;
+    border-radius: 20px;
+    float:right;
+    margin-top:300px;
+    margin-right:26px;
+    
+}
+.Rectangles_aboutus3 {
+    width: 650px;
+    height:325px;
+    background-color:#c7cfb7;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-right: 100px;
+    
+}
