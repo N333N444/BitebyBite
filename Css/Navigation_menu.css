@@ -325,7 +325,9 @@ body{
     position: absolute;
     width: 35px;
     height: 35px;
-    background: #557174;
+    background-color: #557174;
+    color: #557174;
+    border: none;
 }
 #counter-label{
     position: absolute;

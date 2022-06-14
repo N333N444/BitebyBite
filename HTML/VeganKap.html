@@ -77,17 +77,19 @@
     <div class="PeopleUp_button" style="left: 244px; top: 532px;">
         <button onclick="incrementClick()">^</button>
     </div>
-    <div class="PeopleUp_button" style="left: 200px; top: 532px; rotate: 300px;">
+    <div class="PeopleUp_button" style="left: 200px; top: 532px;">
         <button onclick="OppositeClick()">⌄</button>
     </div>
     <div class="BoxPer_text" style= "width:140px; left:461px; top:530px">
-        Order Mealbox
+        <a href="" style="text-decoration:none; color: white;">Order Mealbox</a>
     </div>
     <div>
         <h3 id="counter-label" style="left: 100px; top: 512px;">1 Person</h3>
     </div>
         <script>
         var counterVal = 1;
+        var myStringArray = [150,"World"];
+        var arrayLength = myStringArray.length;
             function incrementClick() {
             updateDisplay(++counterVal);
             }
@@ -95,12 +97,21 @@
             updateDisplay(--counterVal);
             }
             function updateDisplay(val) {
-                if (val == 1)
-                    document.getElementById("counter-label").innerHTML = val + " Person";
-                if (val < 1)
-                    document.getElementById("counter-label").innerHTML = val + " Person" + button.disabled == true; 
-                if (val > 1)
-                    document.getElementById("counter-label").innerHTML = val + " Persons";
+            if (val == 1)
+                document.getElementById("counter-label").innerHTML = val + " Person";
+                for (var i = 0; i < arrayLength; i++) {
+                    console.log("1");
+                }
+            if (val < 1)
+                document.getElementById("counter-label").innerHTML = val + " Person" + button.disabled == true;
+                for (var i = 0; i < arrayLength; i++) {
+                        console.log("2");
+                }  
+            if (val > 1)
+                document.getElementById("counter-label").innerHTML = val + " Persons";
+                for (var i = 0; i < arrayLength; i++) {
+                    console.log("3");
+                }
             }
     </script>
     
