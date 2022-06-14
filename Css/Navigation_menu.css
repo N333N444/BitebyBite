@@ -339,6 +339,28 @@ body{
     line-height: 24px;
     color: #FFFFFF;
 }
+#Ingredients_text{
+    position: absolute;
+    width: 282px;
+    height: 240px;
+    font-family: 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+#IngredientsTitl_text{
+    position: absolute;
+    width: 282px;
+    height: 240px;
+    font-family: 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
 .Rectangles_aboutus {
     position: absolute;
     left: 30px; 

@@ -86,33 +86,49 @@
     <div>
         <h3 id="counter-label" style="left: 100px; top: 512px;">1 Person</h3>
     </div>
+    <div>
+        <h3 id="IngredientsTitl_text" style="left: 80px; top: 590px;">Ingredients (Present in mealbox):
+    </div>
+    <div>
+        <h3 id="Ingredients_text" style="left: 80px; top: 615px;">100 gr - Carrots<br>150 gr - Vegetable cheese<br>175 gr - Vegan shoarma<br> 190 gr - Radish<br>200 gr  - Oven fries<br> 0.75 - Cucumber <br>0.5 Teaspoons of Fresh parsley</h3>
+    </div>
         <script>
         var counterVal = 1;
-        var myStringArray = [150,"World"];
-        var arrayLength = myStringArray.length;
+        var EmptyList = []
+        const ingredients = {
+            175: " gr - Vegan shoarma",
+            200 : " gr - Oven fries",
+            195 : " gr - Radish",
+            100 : " gr - Carrots",
+            150 : " gr - Vegetable cheese",
+            0.75 : " - Cucumber",
+            0.5 : " Teaspoons of Fresh Parshley",           
+            
+        }
             function incrementClick() {
             updateDisplay(++counterVal);
+            Dictionarytest(counterVal);
             }
             function OppositeClick() {
             updateDisplay(--counterVal);
+            Dictionarytest(counterVal);
             }
             function updateDisplay(val) {
             if (val == 1)
                 document.getElementById("counter-label").innerHTML = val + " Person";
-                for (var i = 0; i < arrayLength; i++) {
-                    console.log("1");
-                }
             if (val < 1)
-                document.getElementById("counter-label").innerHTML = val + " Person" + button.disabled == true;
-                for (var i = 0; i < arrayLength; i++) {
-                        console.log("2");
-                }  
+                OppositeClick.disabled == true + updateDisplay(++counterVal);  
             if (val > 1)
                 document.getElementById("counter-label").innerHTML = val + " Persons";
-                for (var i = 0; i < arrayLength; i++) {
-                    console.log("3");
-                }
             }
+            function Dictionarytest(val) {
+            for (const key of Object.keys(ingredients))
+                EmptyList.push(key*val + ingredients[key] + "<br>");
+                console.log(EmptyList)
+                document.getElementById("Ingredients_text").innerHTML = EmptyList.join("");
+                EmptyList = [];
+            };
+
     </script>
     
 </body>
