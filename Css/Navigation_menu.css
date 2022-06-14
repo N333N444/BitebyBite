@@ -266,14 +266,14 @@ body{
 .Rectangles_Recp {
     position: absolute;
     width: 648px;
-    height: 888px;
+    height: 1250px;
     background: #C7CFB7;
     border-radius: 20px;
 }
 .Rectangles_Ingre {
     position: absolute;
     width: 664px;
-    height: 326px;
+    height: 330px;
     background: #C7CFB7;
     border-radius: 20px;
 }
@@ -291,11 +291,13 @@ body{
     position: absolute;
     height: 0px;
     border: 3px solid #000000;
+    background-color: black;
 }
 .Separation_line {
     position: absolute;
     height: 0px;
     border: 1px solid #000000;
+    background-color: black;
 }
 .Rectangles_Mealbox {
     position: absolute;
@@ -341,7 +343,7 @@ body{
 }
 #Ingredients_text{
     position: absolute;
-    width: 282px;
+    width: 300px;
     height: 240px;
     font-family: 'sans-serif';
     font-style: normal;
@@ -350,7 +352,7 @@ body{
     line-height: 24px;
     color: #000000;
 }
-#IngredientsTitl_text{
+.IngredientsTitl_text{
     position: absolute;
     width: 282px;
     height: 240px;
@@ -361,6 +363,31 @@ body{
     line-height: 24px;
     color: #000000;
 }
+.IngredientsExtra_text{
+    position: absolute;
+    width: 271px;
+    height: 144px;
+    font-family: 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.Preparation_text{
+    position: absolute;
+    width: 639px;
+    height: 90px;
+    font-family: 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+}
+
+
 .Rectangles_aboutus {
     position: absolute;
     left: 30px; 
