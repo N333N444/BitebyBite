@@ -98,6 +98,15 @@
     <div class="IngredientsExtra_text" style="left: 82px; top: 810px;">
         Ingredients (Not present in mealbox):<br> Tablespoons white wine vinegar <br> Salt <br> Vegan garlic sauce
     </div>
+    <div class="IngredientsExtra_text" style="left: 435px; top: 610px;">
+        Allergies: -
+    </div>
+    <div>
+        <h3 id="Ingredients_text2" style="left: 435px; top: 615px;">31 Kcal Carbohydrates<br>500 Kcal Calories<br>3.4 G Fibers<br>2.2 G Salt<br></h3>
+    </div>
+    <div class="IngredientsExtra_text" style="left: 435px; top: 790px;">
+        Preparation time: 25 min<br>(based on 2 persons)<br>Ease of making: Easy<br>Liked by <a style="font-weight: bold;">87</a>% of our enthusiastic cooks 
+    </div>
     <div class="Preparation_text" style="left: 800px; top: 254px;">
         *  Warm the oven at the temperature noted at the bag of oven fries.
     </div>
@@ -139,11 +148,34 @@
     </div>
     <div class="Separation_line" style="width: 646px; left: 800px; top: 1335px;"></div>
     <div class="Preparation_text" style="left: 800px; top: 1340px;">
-        For an extra touch on the vegan kapsalon try adding some <a href="#" style="text-decoration:none; font-weight: bold; font-style: italic; color:#000000;">selfmade vegan garlic sauce.</a>
+        For an extra touch on the vegan kapsalon try adding some <a href="Dishes copy.html" style="text-decoration:none; font-weight: bold; font-style: italic; color:#000000;">selfmade vegan garlic sauce.</a>
+    </div>
+    <div class="Rectangles_Ingre" style="left: 56px; top:1000px"></div>
+    <div class="Preparation_text" style="left: 56px; top: 1010px; font-weight: bold;">
+        Could you help us out ?
+    </div>
+    <div class="Preparation_text" style="left: 65px; top: 1050px; text-align: left;">
+        Ease of making according to expectations.
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1090px;"></div>
+    <div class="Preparation_text" style="left: 65px; top: 1095px; text-align: left;">
+        Preparation time according to expectations.
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1140px;"></div>
+    <div class="Preparation_text" style="left: 65px; top: 1145px; text-align: left;">
+        A dish for everyone ?
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1185px;"></div>
+    <div class="Preparation_text" style="left: 65px; top: 1190px; text-align: left;">
+        Liked the dish that you prepared ?
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1230px;"></div>
+    <div class="Preparation_text" style="left: 56px; top: 1250px; font-weight: bold;">
+        Thank you and enjoy your meal !
     </div>
 
-
-        <script>
+    
+    <script>
         var counterVal = 1;
         var EmptyList = []
         const ingredients = {
@@ -155,14 +187,22 @@
             0.5 : " - Cucumber",
             0.25 : " Teaspoon(s) of Fresh Parshley",               
         }
+        const IngrExtra = {
+            500: " Kcal Calories",
+            31: " Kcal Carbohydrates",
+            3.4: " G Fibers",
+            2.2: " G Salt",
+        }
         
             function incrementClick() {
             updateDisplay(++counterVal);
-            Dictionarytest(counterVal);
+            DictionaryIngr(counterVal);
+            DictionaryExtra(counterVal);
             }
             function OppositeClick() {
             updateDisplay(--counterVal);
-            Dictionarytest(counterVal);
+            DictionaryIngr(counterVal);
+            DictionaryExtra(counterVal);
             }
             function updateDisplay(val) {
             if (val == 1)
@@ -172,13 +212,20 @@
             if (val > 1)
                 document.getElementById("counter-label").innerHTML = val + " Persons";
             }
-            function Dictionarytest(val) {
+            function DictionaryIngr(val) {
             for (const key of Object.keys(ingredients))
                 EmptyList.push(key*val + ingredients[key] + "<br>");
                 console.log(EmptyList)
                 document.getElementById("Ingredients_text").innerHTML = EmptyList.join("");
                 EmptyList = [];
-            };
+            }
+            function DictionaryExtra(val) {
+            for (const key of Object.keys(IngrExtra))
+                EmptyList.push(key*val + IngrExtra[key] + "<br>");
+                console.log(EmptyList)
+                document.getElementById("Ingredients_text2").innerHTML = EmptyList.join("");
+                EmptyList = [];
+            }
 
     </script>
     
