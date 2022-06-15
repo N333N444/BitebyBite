@@ -41,14 +41,22 @@ def AddToCart():
     cartlist = (productname, productprice, productquantity)
     print(type(cartlist))
     #print(NewCartProduct)
-    sql31 = '''INSERT INTO cart VALUES (?,?,?) '''
     c.execute("insert into cart values (?,?,?)", cartlist)
 
-
-
 def RemoveFromCart():
-    print("Oh no")
-
+    c.execute('''SELECT * FROM cart''')
+    results = c.fetchall()
+    print(results)
+    #Search for your chosen product
+    chosenproduct = input("Select a product to remove: ")
+    sql1 = '''SELECT * FROM ingredients WHERE name=:c'''
+    sql2 = {"c": chosenproduct}
+    c.execute(sql1, sql2)
+    Productsearch = c.fetchall() # our tuple [(Aspergus, 2.3, 4)]
+    productname = Productsearch[0][0]
+    sql41 = '''DELETE FROM cart WHERE name="'''
+    sql22 = '''"'''
+    c.execute(sql41 + productname + sql22)
 
 def ChangePrice():
     #These are our products:
@@ -76,7 +84,7 @@ def ChangePrice():
     sql22 = '''"'''
     c.execute(sql20 + chosenprice + sql21 + productselect + sql22)
 
-AddToCart()
+RemoveFromCart()
 ReadDatabase()
 
 
