@@ -25,38 +25,42 @@ def AddIngredient():
     newproduct = (product, costnm)
     c.execute('''INSERT INTO ingredients values (?,?)", newproduct''')
 
-def AddToCart():
-    c.execute('''SELECT * FROM ingredients''')
-    results = c.fetchall()
-    print(results)
+def AddToCart(productname, Currentquantity):
     #Search for your chosen product
-    chosenproduct = input("Select a product: ")
     sql1 = '''SELECT * FROM ingredients WHERE name=:c'''
-    sql2 = {"c": chosenproduct}
+    sql2 = {"c": productname}
     c.execute(sql1, sql2)
-    Productsearch = c.fetchall() # our tuple [(Aspergus, 2.3)]
+    Productsearch = c.fetchall()
     productname = str(Productsearch[0][0])
     productprice = float(Productsearch[0][1])
-    productquantity = int(input("How many do you want? "))
-    cartlist = (productname, productprice, productquantity)
-    print(type(cartlist))
-    #print(NewCartProduct)
-    c.execute("insert into cart values (?,?,?)", cartlist)
-
-def RemoveFromCart():
-    c.execute('''SELECT * FROM cart''')
-    results = c.fetchall()
-    print(results)
-    #Search for your chosen product
-    chosenproduct = input("Select a product to remove: ")
-    sql1 = '''SELECT * FROM ingredients WHERE name=:c'''
-    sql2 = {"c": chosenproduct}
+    cartlist = (productname, productprice, Currentquantity)
+    # check if the product is in the cart
+    sql1 = '''SELECT * FROM cart WHERE name=:c'''
+    sql2 = {"c": productname}
     c.execute(sql1, sql2)
-    Productsearch = c.fetchall() # our tuple [(Aspergus, 2.3, 4)]
-    productname = Productsearch[0][0]
-    sql41 = '''DELETE FROM cart WHERE name="'''
-    sql22 = '''"'''
-    c.execute(sql41 + productname + sql22)
+    Productselect = c.fetchall()
+    if len(Productselect) == 0:
+        c.execute('''INSERT INTO cart VALUES (?,?,?)''', cartlist)
+    else:
+        sql1 = '''UPDATE cart SET quantity = '''
+        sql2 = ''' WHERE name="'''
+        sql3 = '''"'''
+        c.execute(sql1 + str(Currentquantity) + sql2 + productname + sql3)
+
+def RemoveFromCart(productname, Currentquantity):
+    #Search for your chosen product
+    sql1 = '''SELECT * FROM ingredients WHERE name=:c'''
+    sql2 = {"c": productname}
+    c.execute(sql1, sql2)
+    if Currentquantity == 0:
+        sql41 = '''DELETE FROM cart WHERE name="'''
+        sql22 = '''"'''
+        c.execute(sql41 + productname + sql22)
+    else:
+        sql1 = '''UPDATE cart SET quantity = '''
+        sql2 = ''' WHERE name="'''
+        sql3 = '''"'''
+        c.execute(sql1 + str(Currentquantity) + sql2 + productname + sql3)
 
 def ChangePrice():
     #These are our products:
@@ -93,8 +97,35 @@ def CalcFinalPrice():
         totalprice = totalprice + (i[1] * i[2])    
     return totalprice
 
-#var = CalcFinalPrice()
-#print(var)
+
+def pluscount(productname):
+    sql1 = '''SELECT * FROM cart WHERE name=:c'''
+    sql2 = {"c": productname}
+    c.execute(sql1, sql2)
+    Productselect = c.fetchall() # our tuple [(Aspergus, 2.3)]
+    print(Productselect)
+    if len(Productselect) == 0:
+        Currentquantity = 1
+    else:
+        quantity = Productselect[0][2]
+        Currentquantity = quantity + 1
+    AddToCart(productname, Currentquantity)
+   
+def  mincount(productname):
+    sql1 = '''SELECT * FROM cart WHERE name=:c'''
+    sql2 = {"c": productname}
+    c.execute(sql1, sql2)
+    Productselect = c.fetchall() 
+    if len(Productselect) == 0:
+        Currentquantity = 0
+    else:
+        quantity = Productselect[0][2]
+        Currentquantity = quantity - 1
+        RemoveFromCart(productname, Currentquantity)
+
+mincount("Aspergus")
+ReadDatabase()
+
 
 
 
