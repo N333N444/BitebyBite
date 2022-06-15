@@ -84,8 +84,18 @@ def ChangePrice():
     sql22 = '''"'''
     c.execute(sql20 + chosenprice + sql21 + productselect + sql22)
 
-RemoveFromCart()
-ReadDatabase()
+def CalcFinalPrice():
+    c.execute('''SELECT * FROM cart''')
+    results = c.fetchall()
+    print(results)
+    totalprice = 0
+    for i in results:
+        totalprice = totalprice + (i[1] * i[2])    
+    return totalprice
+
+#var = CalcFinalPrice()
+#print(var)
+
 
 
 
