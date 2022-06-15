@@ -97,7 +97,6 @@ def CalcFinalPrice():
         totalprice = totalprice + (i[1] * i[2])    
     return totalprice
 
-
 def pluscount(productname):
     sql1 = '''SELECT * FROM cart WHERE name=:c'''
     sql2 = {"c": productname}
@@ -123,8 +122,7 @@ def  mincount(productname):
         Currentquantity = quantity - 1
         RemoveFromCart(productname, Currentquantity)
 
-mincount("Aspergus")
-ReadDatabase()
+
 
 
 
