@@ -23,12 +23,12 @@ c.execute("create table cart (name text, price real, quantity integer)")
 list1 = [("Aspergus", 2.30),("Apples", 3.30),("Apples", 4.50)]
 list2 = [("Melvin", "logged_in"),("Nena", "logged_out")]
 list3 = [("Melvin", "admin"),("Nena","admin")]
-list4 = []
+list4 = [("Cabagga", 7.40, 3)]
 
 c.executemany("insert into ingredients values (?,?)", list1)
 c.executemany("insert into user_status values (?,?)", list2)
 c.executemany("insert into user_password values (?,?)", list3)
-#c.executemany("insert into user_password values (?,?,?)", list4)
+c.executemany("insert into cart values (?,?,?)", list4)
 
 connection.commit()
 connection.close()

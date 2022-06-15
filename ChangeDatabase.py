@@ -26,7 +26,24 @@ def AddIngredient():
     c.execute('''INSERT INTO ingredients values (?,?)", newproduct''')
 
 def AddToCart():
-    print("Hi")
+    c.execute('''SELECT * FROM ingredients''')
+    results = c.fetchall()
+    print(results)
+    #Search for your chosen product
+    chosenproduct = input("Select a product: ")
+    sql1 = '''SELECT * FROM ingredients WHERE name=:c'''
+    sql2 = {"c": chosenproduct}
+    c.execute(sql1, sql2)
+    Productsearch = c.fetchall() # our tuple [(Aspergus, 2.3)]
+    productname = str(Productsearch[0][0])
+    productprice = float(Productsearch[0][1])
+    productquantity = int(input("How many do you want? "))
+    cartlist = (productname, productprice, productquantity)
+    print(type(cartlist))
+    #print(NewCartProduct)
+    sql31 = '''INSERT INTO cart VALUES (?,?,?) '''
+    c.execute("insert into cart values (?,?,?)", cartlist)
+
 
 
 def RemoveFromCart():
@@ -59,6 +76,7 @@ def ChangePrice():
     sql22 = '''"'''
     c.execute(sql20 + chosenprice + sql21 + productselect + sql22)
 
+AddToCart()
 ReadDatabase()
 
 
