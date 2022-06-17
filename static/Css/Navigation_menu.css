@@ -1,0 +1,468 @@
+body{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1500px !important;
+    width: 100%;
+}
+
+.index {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f7f7e8;
+    height: 70px;
+}
+
+.Navbar_left {
+    list-style-type: none;
+    margin-top: 0;
+    margin-left: -40px;
+    padding: 0;
+    float: left;
+    text-align: center;
+    
+}
+
+.Navbar_right{
+    list-style-type: none;
+    padding: 0;
+    float: right;
+}
+
+.Logo{
+    margin-top: -10px;
+    width: 75px;
+    height: 60px;
+}
+
+.Logo a:hover{
+    background-color: none !important;
+}
+
+.Search{
+    margin-right: 80px;
+    margin-top: -2;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    height: 40px;
+    border-radius: 60px;
+}
+
+.Search_bar{
+    border: none;
+    width: 350px;
+    height: 30px;
+    outline: none !important;
+    margin-left: 10px;
+    margin-top: 5;
+}
+
+.Search button{
+    border: none;
+    height: 30px;
+    width: 30px;
+    margin-top: -1px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.Search button:hover{
+    cursor: pointer;
+}
+
+#Navigation_desktop li a{
+    display: block;
+    height: 70px;
+    margin-top: -16px;
+    text-decoration: none;
+    line-height: 39px;
+    font-size: 20px;
+}
+  
+#Navigation_desktop li{
+    float: left;
+}
+
+#Navigation_desktop a:hover{
+    background-color: antiquewhite;
+}
+
+.Navigation_desktop_active{
+    background-color: antiquewhite;
+}
+
+.Avatar{
+    vertical-align: auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-top: 4px;
+}
+
+#Navigation_mobile {
+    display:none;
+    overflow: hidden;
+    position: relative;
+    flex-direction: column;
+    padding-left: 50px;
+}
+
+.hamburgericon {
+    display: none !important;
+}
+
+#linkies {
+    list-style-type: none;
+    position: absolute;
+    background-color: #f7f7e8;
+    display: none;
+    width: 100%;
+    margin-top: -2px;
+    z-index: 100;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+@media (max-width: 1170px) {
+    #Navigation_desktop {
+        display: none;
+    }
+
+    #Navigation_mobile {
+        display: block;
+    }
+
+    .hamburgericon {
+        display: block !important;
+    }
+    .index{
+        width: 100%;
+        overflow: hidden;
+        background-color: #f7f7e8;
+        height: 48px !important;
+    }
+}
+
+.index a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+  
+.index a.icon {
+    background: #f7f7e8;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 16px 20px;
+}
+
+.index a.Avatar_mobile{
+    display: flex;
+    justify-content: center;
+    background: #f7f7e8;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 19px;
+    height: 19px;
+}
+  
+.index a.Shopping_cart_mobile{
+    display: flex;
+    justify-content: center;
+    background: #f7f7e8;
+    position: absolute;
+    right: 50px;
+    top: 0;
+    width: 19px;
+    height: 19px;
+}
+
+.index a:hover {
+    background-color: antiquewhite;
+    color: black;
+}
+
+.On_hover_off:hover{
+    background-color: #f7f7e8 !important;
+}
+
+.Image {
+    border-radius: 20px;
+}
+.Rectangles_LG {
+    position: absolute;
+    width: 448px;
+    height: 340px;
+    background-color:#c7cfb7;
+    border-radius: 20px;
+}
+.Rectangles_DG {
+    position: absolute;
+    width: 448px;
+    height: 340px;
+    background: #9DAD7F;
+    border-radius: 20px;
+}
+.Normal_text {
+    position: absolute;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+}
+.Icon_text {
+    position: absolute;
+    height: 24px;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+.Rectangles_DD {
+    position: absolute;
+    width: 233px;
+    height: 874px;
+    background: #D9D9D9;
+    border-radius: 20px 20px 0px 0px;
+}
+.Search_text {
+    position: absolute;
+    width: 119px;
+    height: 21px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+.Icons {
+    position:absolute
+}
+.Title_Recp {
+    position:absolute;
+    font-family: 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+}
+.Rectangles_Recp {
+    position: absolute;
+    width: 648px;
+    height: 1250px;
+    background: #C7CFB7;
+    border-radius: 20px;
+}
+.Rectangles_Ingre {
+    position: absolute;
+    width: 664px;
+    height: 330px;
+    background: #C7CFB7;
+    border-radius: 20px;
+}
+.Recipe_text {
+    position: absolute;
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+}
+.Preparation_line {
+    position: absolute;
+    height: 0px;
+    border: 3px solid #000000;
+    background-color: black;
+}
+.Separation_line {
+    position: absolute;
+    height: 0px;
+    border: 1px solid #000000;
+    background-color: black;
+}
+.Rectangles_Mealbox {
+    position: absolute;
+    width: 302px;
+    height: 38px;
+    background: #557174;
+    border-radius: 20px;
+}
+.Rectangles_Persons {
+    position: absolute;
+    width: 228px;
+    height: 42px;
+    background: #557174;
+    border-radius: 20px;
+}
+.BoxPer_text{
+    position: absolute;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.PeopleUp_button{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #557174;
+    color: #557174;
+    border: none;
+}
+#counter-label{
+    position: absolute;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+
+#Ingredients_text{
+    position: absolute;
+    width: 300px;
+    height: 240px;
+    font-family: 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+#Ingredients_text2{
+    position: absolute;
+    width: 300px;
+    height: 240px;
+    font-family: 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.IngredientsTitl_text{
+    position: absolute;
+    width: 282px;
+    height: 240px;
+    font-family: 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.IngredientsExtra_text{
+    position: absolute;
+    width: 271px;
+    height: 144px;
+    font-family: 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.Preparation_text{
+    position: absolute;
+    width: 639px;
+    height: 90px;
+    font-family: 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+}
+
+
+.Rectangles_aboutus {
+    position: absolute;
+    left: 30px; 
+    margin-top: 20px;
+    width: 1440px;
+    height: 260px;
+    background-color:#c7cfb7;
+    border-radius: 20px;
+}
+.Rectangles_aboutus2 {
+    
+    width: 650px;
+    height: 325px;
+    background-color: #9DAD7F;
+    border-radius: 20px;
+    float:right;
+    margin-top:300px;
+    margin-right:26px;
+    
+}
+.Rectangles_aboutus3 {
+    width: 650px;
+    height:325px;
+    background-color:#c7cfb7;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-right: 100px;
+    
+}
+
+/*product */ 
+
+.Rectangles_product_left {
+    position: absolute;
+    width: 233px;
+    height: 874px;
+    background: #D9D9D9;
+    
+}
+
+div.Rectangles_product1 {
+    
+    background-color:#c7cfb7;
+}
+div.Rectangles_product2 {
+    
+    
+    background-color:#c7cfb7;
+}
+div.Rectangles_product3 {
+    
+    
+    background-color:#c7cfb7;
+}
+div.grid_product {
+    display: grid;
+    grid-template-columns: 18vw 18vw 18vw 18vw;
+    grid-template-rows: 40vh 40vh;
+    margin-left:280px;
+    margin-top: 40px;
+    gap: 30px;
+
+    
+}
