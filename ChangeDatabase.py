@@ -1,7 +1,15 @@
 import sqlite3
+from flask import Flask, render_template
+app = Flask(__name__)
+counterlist = ["0","0","0","0","0"]
+
+
+@app.route('/')
+def index():
+  return render_template('index.html', counters = counterlist)
 
 print("**************")
-connection = sqlite3.connect('BitebyBite.db')
+connection = sqlite3.connect('BitebyBite.db', check_same_thread=False)
 c = connection.cursor()
 
 def ReadDatabase():
@@ -97,20 +105,28 @@ def CalcFinalPrice():
         totalprice = totalprice + (i[1] * i[2])    
     return totalprice
 
-def pluscount(productname):
+
+@app.route('/my-link/')
+
+def pluscount():
+    productname="Aspergus"
     sql1 = '''SELECT * FROM cart WHERE name=:c'''
     sql2 = {"c": productname}
     c.execute(sql1, sql2)
     Productselect = c.fetchall() # our tuple [(Aspergus, 2.3)]
-    print(Productselect)
+    print("Plus count uitgevoerd")
     if len(Productselect) == 0:
         Currentquantity = 1
     else:
         quantity = Productselect[0][2]
         Currentquantity = quantity + 1
     AddToCart(productname, Currentquantity)
-   
-def  mincount(productname):
+    counterlist[0] = str(Currentquantity)
+    return render_template("index.html", counters = counterlist)
+
+@app.route('/minus/')
+def  mincount():
+    productname="Aspergus"
     sql1 = '''SELECT * FROM cart WHERE name=:c'''
     sql2 = {"c": productname}
     c.execute(sql1, sql2)
@@ -121,6 +137,45 @@ def  mincount(productname):
         quantity = Productselect[0][2]
         Currentquantity = quantity - 1
         RemoveFromCart(productname, Currentquantity)
+    counterlist[0] = str(Currentquantity)
+    return render_template("index.html", counters = counterlist)
+
+@app.route('/my-link2/')
+def Pluscount():
+    productname="Apples"
+    sql1 = '''SELECT * FROM cart WHERE name=:c'''
+    sql2 = {"c": productname}
+    c.execute(sql1, sql2)
+    Productselect = c.fetchall() # our tuple [(Aspergus, 2.3)]
+    print("Plus count uitgevoerd")
+    if len(Productselect) == 0:
+        Currentquantity = 1
+    else:
+        quantity = Productselect[0][2]
+        Currentquantity = quantity + 1
+    AddToCart(productname, Currentquantity)
+    counterlist[1] = str(Currentquantity)
+    return render_template("index.html", counters = counterlist)
+
+@app.route('/minus2/')
+def  Mincount():
+    productname="Apples"
+    sql1 = '''SELECT * FROM cart WHERE name=:c'''
+    sql2 = {"c": productname}
+    c.execute(sql1, sql2)
+    Productselect = c.fetchall() 
+    if len(Productselect) == 0:
+        Currentquantity = 0
+    else:
+        quantity = Productselect[0][2]
+        Currentquantity = quantity - 1
+        RemoveFromCart(productname, Currentquantity)
+    counterlist[1] = str(Currentquantity)
+    return render_template("index.html", counters = counterlist)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+    app.config['SERVER_NAME'] = "127.0.0.1:5000"
 
 
 
@@ -137,8 +192,6 @@ def  mincount(productname):
 
 
 
-
-
-
+# ReadDatabase()
 connection.commit()
 connection.close()
