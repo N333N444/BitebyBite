@@ -389,7 +389,7 @@ body{
 }
 .Preparation_text{
     position: absolute;
-    width: 639px;
+    width: 630px;
     height: 90px;
     font-family: 'sans-serif';
     font-style: normal;
@@ -399,8 +399,6 @@ body{
     text-align: center;
     color: #000000;
 }
-
-
 .Rectangles_aboutus {
     position: absolute;
     left: 30px; 
