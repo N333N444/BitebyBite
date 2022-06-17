@@ -81,7 +81,7 @@
         <button onclick="OppositeClick()">⌄</button>
     </div>
     <div class="BoxPer_text" style= "width:140px; left:461px; top:530px">
-        <a href="" style="text-decoration:none; color: white;">Order Mealbox</a>
+        <button onclick="OrderButton()" style="width:140px; left:461px; top:530px; background-color: #557174; border: none; height: 24px; color: white;">Order Mealbox</button>
     </div>
     <div>
         <h3 id="counter-label" style="left: 100px; top: 512px;">1 Person</h3>
@@ -173,7 +173,9 @@
     
     <script>
         var counterVal = 1;
+        var MealboxVal = 0
         var EmptyList = []
+        var cart
         const ingredients = {
             0.25: " Hand of grated cheese",
             200 : " gr - Potato slices",
@@ -197,11 +199,13 @@
             updateDisplay(++counterVal);
             DictionaryIngr(counterVal);
             DictionaryExtra(counterVal);
+            OrderButton(counterVal);
             }
             function OppositeClick() {
             updateDisplay(--counterVal);
             DictionaryIngr(counterVal);
             DictionaryExtra(counterVal);
+            OrderButton(counterVal);
             }
             function updateDisplay(val) {
             if (val == 1)
@@ -222,8 +226,7 @@
                 EmptyList.push(key*val + IngrExtra[key] + "<br>");
                 document.getElementById("Ingredients_text2").innerHTML = EmptyList.join("");
                 EmptyList = [];
-            }
-
+            }    
     </script>
 </body>
 </html>
