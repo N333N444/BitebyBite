@@ -1,8 +1,8 @@
 <html>
 <head>
-    <link rel="stylesheet" href="Css/Log_in.css">
-    <link rel="stylesheet" href="Css/Index.css">
-    <link rel="stylesheet" href="Css/Navigation_menu.css">
+    <link rel="stylesheet" href="../static/Css/Index.css">
+    <link rel="stylesheet" href="../static/Css/Index.css">
+    <link rel="stylesheet" href="../static/Css/Navigation_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Byte by Byte</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -15,7 +15,7 @@
             <div class="Navbar_left">
                 <li><a href="index.html"><img src="Pictures/index/leeg_logo.png" class="Logo"></a></li>
                 <li><a class="Navigation_desktop_active" href="index.html">Home</a></li>
-                <li><a href="HTML/Recipes.html">Recipes</a></li>
+                <li><a href="../HTML/Product.html">Recipes</a></li>
                 <li><a href="HTML/Dishes.html">Dishes</a></li>
                 <li><a href="HTML/About_us.html">About us</a></li>
             </div>
@@ -68,19 +68,19 @@
         </div>
         <div class="Scroling-pictures">
             <div class="Pictures fade">
-                <img src="Pictures/Cycle through/index1.jpg" style="width: 100%; border-radius: 30px;">
+                <img src="../static/Pictures/Cycle through/index1.jpg" style="width: 100%; border-radius: 30px;">
                 <div class="Pictures-text">Spices</div>
             </div>
             <div class="Pictures fade">
-                <img src="Pictures/Cycle through/index2.jpg" style="width: 100%; border-radius: 30px;">
+                <img src="../static/Pictures/Cycle through/index2.jpg" style="width: 100%; border-radius: 30px;">
                 <div class="Pictures-text">More spices</div>
             </div>
             <div class="Pictures fade">
-                <img src="Pictures/Cycle through/index3.jpg" style="width: 100%; border-radius: 30px;">
+                <img src="../static/Pictures/Cycle through/index3.jpg" style="width: 100%; border-radius: 30px;">
                 <div class="Pictures-text">Christmas meal</div>
             </div>
             <div class="Pictures fade">
-                <img src="Pictures/Cycle through/index4.jpg" style="width: 100%; border-radius: 30px;">
+                <img src="../static/Pictures/Cycle through/index4.jpg" style="width: 100%; border-radius: 30px;">
                 <div class="Pictures-text">Coliflower</div>
             </div>
         </div>
@@ -122,7 +122,14 @@
         </div>
 
     </div>
-    
+
+      <button type="button" class="button hollow circle"><a href="/my-link/">Plus</a></button>
+      <button type="button" class="button hollow circle"><a href="/minus/">Min</a></button>
+      <p>{{counters[0]}}</p>
+      <button type="button" class="button hollow circle"><a href="/my-link2/">Plus</a></button>
+      <button type="button" class="button hollow circle"><a href="/minus2/">Min</a></button>
+      <p>{{counters[1]}}</p>
+
     <script>
         let PictureIndex = 1;
         showSlides(PictureIndex);
