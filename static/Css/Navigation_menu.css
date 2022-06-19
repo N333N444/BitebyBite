@@ -458,11 +458,29 @@ div.Rectangles_product3 {
 }
 div.grid_product {
     display: grid;
-    grid-template-columns: 18vw 18vw 18vw 18vw;
-    grid-template-rows: 40vh 40vh;
-    margin-left:280px;
-    margin-top: 40px;
+    grid-template-columns: 18% 18% 18% 18%;
+    grid-template-rows: 40% 40%;
+    margin-left:250px;
+    margin-top: 30px;
     gap: 30px;
 
     
+}
+
+.productbuttonleft{
+    font-size: 21px;
+    color: black;
+    border-radius: 20px 0px 0px 20px;
+    border: 1px solid;
+    height: 30px;
+    width: 33px;
+}
+
+.productbuttonright{
+    font-size: 21px;
+    color: black;
+    border-radius: 0px 20px 20px 0px;
+    border: 1px solid;
+    height: 30px;
+    width: 33px;
 }

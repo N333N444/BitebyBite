@@ -9,8 +9,11 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <style></style>
+    <style>
+    a {text-decoration:none;}
+    </style>
   </head>
+  
   <body>
     <div class="index">
       <ul id="Navigation_desktop">
@@ -93,57 +96,88 @@
     <img
       src="/Pictures\index/product_top.png"
       alt="product_top"
-      style="margin-left: 215px; width: 1300px"
+      style="margin-left: 233px; width: 1100px; height: 300px;"
     />
 
     <div class="grid_product">
+      
       <div
         class="Rectangles_product1"
         style="grid-column: 1 / 1; grid-row: 1/1"
       >
-        test1
+        Aspergus
+        <br><button type="button" class="productbuttonleft"><a href="/minus2/">-</a></button>
+          <label>{{counters[0]}}</label>
+          <button type="button" class="productbuttonright"><a href="/my-link2/">+</a></button>                
       </div>
+
       <div
         class="Rectangles_product2"
-        style="grid-column: 2 / 2; grid-row: 1/1"
+        style="grid-column: 2 / 2; grid-row: 1/1" 
       >
-        test2
+        Apples
+        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
+        <label>{{counters[1]}}</label>
+        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
       </div>
+
       <div
         class="Rectangles_product3"
         style="grid-column: 3 / 3; grid-row: 1/1"
       >
-        test3
+        Cabagge
+        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
+        <label>{{counters[2]}}</label>
+        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
       </div>
+
       <div
         class="Rectangles_product4"
         style="grid-column: 4 / 4; grid-row: 1/1; background-color: #c7cfb7"
       >
-        test3
+        Apples
+        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
+        <label>{{counters[3]}}</label>
+        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
       </div>
+
       <div
         class="Rectangles_product5"
         style="grid-column: 1 / 1; grid-row: 2/2; background-color: #c7cfb7"
       >
-        test3
+        Carrots
+        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
+        <label>{{counters[4]}}</label>
+        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
       </div>
+
       <div
         class="Rectangles_product6"
         style="grid-column: 2 / 2; grid-row: 2/2; background-color: #c7cfb7"
       >
-        test3
+        Seldery
+        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
+        <label>{{counters[5]}}</label>
+        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
       </div>
+
       <div
         class="Rectangles_product7"
         style="grid-column: 3 / 3; grid-row: 2/2; background-color: #c7cfb7"
       >
-        test3
+        Pak soi
+        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
+        <label>{{counters[6]}}</label>
+        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
       </div>
       <div
         class="Rectangles_product8"
         style="grid-column: 4 / 4; grid-row: 2/2; background-color: #c7cfb7"
       >
-        test3
+        Red onions
+        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
+        <label>{{counters[7]}}</label>
+        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
       </div>
     </div>
   </body>
