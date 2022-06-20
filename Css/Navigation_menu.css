@@ -472,8 +472,10 @@ div.grid_product {
     grid-template-columns: 18vw 18vw 18vw 18vw;
     grid-template-rows: 40vh 40vh;
     margin-left:280px;
-    margin-top: 40px;
-    gap: 30px;  
+    margin-top: 200px;
+    gap: 30px; 
+    z-index: 1;
+    position:relative; 
 }
 /*Acc create */
 
