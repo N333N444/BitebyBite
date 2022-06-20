@@ -328,7 +328,7 @@ body{
     width: 35px;
     height: 35px;
     background-color: #557174;
-    color: #557174;
+    font-size: larger;
     border: none;
 }
 #counter-label{
@@ -477,21 +477,21 @@ div.grid_product {
 }
 /*Acc create */
 
-.Rectangles_Persons {
+.Rectangles_AC {
     position: absolute;
-    width: 1440px;
-    height: 890px;
-    left: 0px;
-    top: 134px;
-
-    background: #9DAD7F;
+    width: 1168px;
+    height: 809px;
+    left: 137.4px;
+    top: 175px;
+    background: #C7CFB7;
+    border-radius: 20px;
 }
 .AC_button {
     position: absolute;
     width: 390px;
     height: 58px;
     background-color: #9DAD7F;
-    border:none;
+    border: none;
     background: #9DAD7F;
     border-radius: 20px;
 }
@@ -505,4 +505,21 @@ div.grid_product {
     font-size: 20px;
     line-height: 36px;
     color: #000000;
+}
+
+.Circle {
+    background: lightgrey;
+    border-radius: 50%;
+    width: 200px;
+    height: 40px;
+}
+
+.Bio {
+    background-color: rgb(33, 225, 33);
+    border-radius: 50%;
+    width: 35;
+    height: 35;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 1000;
 }
