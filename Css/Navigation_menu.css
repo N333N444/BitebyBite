@@ -506,3 +506,20 @@ div.grid_product {
     line-height: 36px;
     color: #000000;
 }
+
+.Circle {
+    background: lightgrey;
+    border-radius: 50%;
+    width: 200px;
+    height: 40px;
+}
+
+.Bio {
+    background-color: rgb(33, 225, 33);
+    border-radius: 50%;
+    width: 35;
+    height: 35;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 1000;
+}
