@@ -59,59 +59,13 @@
             <li><a href="About_us.html">About us</a></li>
         </div>
     </div>
-
-<div class="Rectangles_Recp" style="left:150px; top:120px; height: 600px; width: 1230px;"></div>
-<div class= "AC_buttonTXT" style="height:36px; width:150px; left:170px; top:196px">
-    *First Name:<br> <input type="text" id="FN" value="" class="AC_button">
-</div>
-<div class= "AC_buttonTXT" style="height:36px; width:150px; left:570px; top:196px">
-    *Last name:<br> <input type="text" id="LN" value=""class="AC_button">
-</div>
-<div class= "AC_buttonTXT" style="height:36px; width:150px; left:970px; top:196px">
-Email:<br> <input type="text" id="Email" value="" class="AC_button">
-</div>
-<div class= "AC_buttonTXT" style="height:36px; width:150px; left:570px; top:296px">
-Birthday:<br> <input type="text" id="BD" value="" class="AC_button">
-</div>
-<div class= "AC_buttonTXT" style="height:36px; width:150px; left:970px; top:296px">
-Phone number:<br> <input type="text" id="PN" value="" class="AC_button">
-</div>
-<div class= "AC_buttonTXT" style="height:36px; width:150px; left:170px; top:296px">
-Street:<br> <input type="text" id="Street" value="" class="AC_button">
-</div>
-<div class= "AC_buttonTXT" style="height:36px; width:150px; left:170px; top:396px">
-Recedency:<br> <input type="text" id="Recedency" value="" class="AC_button">
-</div>
-<div class= "AC_buttonTXT" style="height:36px; width:150px; left:570px; top:396px">
-ZIP Code:<br> <input type="text" id="ZIP" value="" class="AC_button">
-</div>
-<div class= "AC_buttonTXT" style="height:36px; width:150px; left:170px; top:496px">
-Password:<br> <input type="text" id="Password" value="" class="AC_button">
-</div>
-<div class= "AC_buttonTXT" style="height:36px; width:150px; left:570px; top:496px">
-Repeat Password:<br> <input type="text" id="RPassword" value="" class="AC_button">
-</div>
-
-<button onclick="myFunction()" class="AC_button" style="height:36px; width:150px; left:270px; top:640px">Try it !</button>
-
-<script>
-    var EmptyList = []
-    function myFunction() {
-      document.getElementById("FN").value = EmptyList.join("");
-      document.getElementById("LN").value = EmptyList.join("");
-      document.getElementById("Email").value = EmptyList.join("");
-      document.getElementById("BD").value = EmptyList.join("");
-      document.getElementById("PN").value = EmptyList.join("");
-      document.getElementById("Street").value = EmptyList.join("");
-      document.getElementById("Recedency").value = EmptyList.join("");
-      document.getElementById("ZIP").value = EmptyList.join("");
-      document.getElementById("Password").value = EmptyList.join("");
-      document.getElementById("RPassword").value = EmptyList.join("broodje aap");
-      EmptyList.push(document.getElementById("RPassword"))
-      console.log(EmptyList)
-    }
-    
-    </script>
-    
 </body>
-</html>
+<div class="BoxPer_text" style= "width:140px; left:461px; top:530px">
+    <button onclick="test()" style="width:140px; left:461px; top:530px; background-color: #557174; border: none; height: 24px; color: white;">Order Mealbox</button>
+</div>
+<script>
+    function test(){ 
+    var LCWS = localStorage.getItem("LCWS");
+    alert(LCWS)
+}
+</script>
