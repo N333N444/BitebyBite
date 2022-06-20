@@ -624,3 +624,21 @@ div.grid_product {
     background: #E2E8F0;
     border-radius: 10px;
 }
+
+.productbuttonleft{
+    font-size: 21px;
+    color: black;
+    border-radius: 20px 0px 0px 20px;
+    border: 1px solid;
+    height: 30px;
+    width: 33px;
+}
+
+.productbuttonright{
+    font-size: 21px;
+    color: black;
+    border-radius: 0px 20px 20px 0px;
+    border: 1px solid;
+    height: 30px;
+    width: 33px;
+}
