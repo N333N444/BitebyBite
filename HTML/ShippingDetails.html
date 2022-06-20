@@ -14,7 +14,7 @@
             <div class="Navbar_left">
                 <li><a href="../index.html"><img src="../Pictures/index/leeg_logo.png" class="Logo"></a></li>
                 <li><a href="../index.html">Home</a></li>
-                <li><a class="Navigation_desktop_active" href="Recipes.html">Recipes</a></li>
+                <li><a href="Recipes.html">Recipes</a></li>
                 <li><a href="Dishes.html">Dishes</a></li>
                 <li><a href="About_us.html">About us</a></li>
             </div>
@@ -68,26 +68,30 @@
     <div class="Timeline_text" style="width: 355px; height: 87px; left:10; top: 80px;"> Byte by Byte <br> </div>
     <div class="Timeline_text" style="width: 355px; height: 87px; left:10; top: 110px; font-size: 20px;font-style: italic;"> Start eating sustainable bite by bite </div>
     <i class="fa-solid fa-octagon-check"></i>
-    <div class="Timeline_text2" style="Width:100px; height:87px; left:600px; top: 100px; color: white;">Account</div>
-    <div class="Timeline_text2" style="Width:100px; height:87px; left:800px; top: 100px">Shipping</div>
+    <div class="Timeline_text2" style="Width:100px; height:87px; left:600px; top: 100px;">Account</div>
+    <div class="Timeline_text2" style="Width:100px; height:87px; left:800px; top: 100px; color: white;">Shipping</div>
     <div class="Timeline_text2" style="Width:100px; height:87px; left:1000px; top: 100px">Payment</div>
-    <div class="Accountmain_text"> Account details</div>
+    <div class="Accountmain_text"> Shipping details</div>
     <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:356px">
-        Email address<br> <input type="text" id="Password" value="" class="Text_button" style="height:58px; width:580px;" required>
+        First line of address<br> <input type="text" id="FirstLine" value="" class="Text_button" style="height:58px; width:580px;" required>
     </div>
     <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:456px">
-        Password<br> <input type="text" id="Password" value="" class="Text_button" style="height:58px; width:580px;" required>
+        Street name<br> <input type="text" id="SN" value="" class="Text_button" style="height:58px; width:580px;" required>
     </div>
-    <div class="Register_text" style= "width:352px; height:58px; left:300px; top:580px">
-        <a href="LCWS.html" style="text-decoration:none; color:#000000;"> Register new account</a>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:556px">
+        Postcode<br> <input type="text" id="ZIP" value="" class="Text_button" style="height:58px; width:580px;" required>
     </div>
-    <div class="Continue_button" style="width:160px; height:55px; left:500px; top:570px"> </div>
-    <div class="Normal_text" style="width:130px; height:45px; left:515px; top:578px; font-size: 22px;">Login</div>
-    <div class="Shipping_line" style="width: 698px; left: 20px; top: 805px;"></div>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:656px">Select delivery</div>
+    <select class="dropdown" style="height:58px; width:580px; left:84px; top:690px" name="" onChange="this.name = this.value; document.getReportAll.submit()">
+        <option  value="report">Free delivery</option>
+        <option  value="leavereport">Paid delivery (+ €7,50)</option>
+    </select>
+    <div class="Shipping_line" style="width: 698px; left: 20px; top: 805px;">
+    </div>
     <div class="Register_text" style= "width:352px; height:58px; left:300px; top:865px">
         <a href="../index.html" style="text-decoration:none; color:#000000; font-size: 22px;"> Cancel order</a>
     </div>
     <div class="Continue_button" style="width:200px; height:55px; left:500px; top:855px"> </div>
-    <div class="Normal_text" style="width:200px; height:45px; left:500px; top:863px; font-size: 22px;"><a href="ShippingDetails.html" style="text-decoration:none; color:#000000;">Shipping details</a></div>
+    <div class="Normal_text" style="width:200px; height:45px; left:500px; top:863px; font-size: 22px;"><a href="Payment.html" style="text-decoration:none; color:#000000;">Payment</a></div>
     <div class="Register_text" style= "width:352px; height:58px; left:850px; top:280px; font-size: 27px;"> Order Review</div>
 </body>
