@@ -21,7 +21,7 @@ c.execute("create table user_password (user text, password text)")
 c.execute("create table cart (name text, price real, quantity integer)")
 
 #Make the list to put in the corresponding table in the database
-list1 = [("Aspergus", 2.30),("Apples", 3.30),("Apples", 4.50)]
+list1 = [("Aspergus", 2.30),("Apples", 3.30),("",),("",),("",),("",),("",),("",),("",)]
 list2 = [("Melvin", "logged_in"),("Nena", "logged_out")]
 list3 = [("Melvin", "admin"),("Nena","admin")]
 
