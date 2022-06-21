@@ -12,9 +12,22 @@ def index():
 def productpage():
     return render_template('Product.html', counters = counterlist)
 
+@app.route('/cart/')
+def cart():
+    productlist = ReadCartInfo()
+    return render_template('Shoppingcart.html', productlist = productlist)
+
 print("**************")
 connection = sqlite3.connect('BitebyBite.db', check_same_thread=False)
 c = connection.cursor()
+
+def ReadCartInfo():
+    table = "cart"
+    sql = '''SELECT * FROM '''
+    c.execute(sql+table)
+    selectedtable = c.fetchall()
+    productlist = selectedtable
+    return productlist
 
 def ReadDatabase():
     c.execute('''SELECT name FROM sqlite_schema''')
@@ -45,7 +58,7 @@ def AddToCart(productname, Currentquantity):
     Productsearch = c.fetchall()
     print(productname)
     productname = str(Productsearch[0][0])
-    productprice = float(Productsearch[0][1])
+    productprice = Currentquantity * float(Productsearch[0][1])
     cartlist = (productname, productprice, Currentquantity)
     # check if the product is in the cart
     sql1 = '''SELECT * FROM cart WHERE name=:c'''
@@ -59,6 +72,9 @@ def AddToCart(productname, Currentquantity):
         sql2 = ''' WHERE name="'''
         sql3 = '''"'''
         c.execute(sql1 + str(Currentquantity) + sql2 + productname + sql3)
+        sql4 = '''UPDATE cart SET price = '''
+        c.execute(sql4 + str(productprice) + sql2 + productname + sql3)
+
 
 def RemoveFromCart(productname, Currentquantity):
     #Search for your chosen product
