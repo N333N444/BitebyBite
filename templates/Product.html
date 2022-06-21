@@ -1,6 +1,7 @@
 <html>
   <head>
-    <link rel="stylesheet" href="../Css/Navigation_menu.css" />
+    <link rel="stylesheet" href="../static/Css/Navigation_menu.css">
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -23,7 +24,7 @@
               ><img src="../Pictures/index/leeg_logo.png" class="Logo"
             /></a>
           </li>
-          <li><a href="/">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li>
             <a class="Navigation_desktop_active" href="Product.html">Products</a>
           </li>
@@ -85,7 +86,8 @@
         </script>
       </div>
       <div id="linkies">
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="Product.html">Product</a></li>
         <li><a href="Dishes.html">Dishes</a></li>
         <li><a href="About_us.html">About us</a></li>
       </div>
@@ -100,81 +102,82 @@
       
       <div
         class="Rectangles_product1"
-        style="grid-column: 1 / 1; grid-row: 1/1; background-color: white; z-index: -2;"
+        style="grid-column: 1 / 1; grid-row: 1/1; z-index: 1;"
       >
-        Aspergus
-        <br><button type="button" class="productbuttonleft"><a href="/minus2/">-</a></button>
-          <label>{{counters[0]}}</label>
-          <button type="button" class="productbuttonright"><a href="/my-link2/">+</a></button>                
+        White Aspergus
+        <br><nobr><button type="button" class="productbuttonleft"><a href="/mwa/">-</a></button>
+        <label>{{ counters[0] }}</label>
+        <button type="button" class="productbuttonright"><a href="/pwa/">+</a></button></nobr>
+                          
       </div>
 
       <div
         class="Rectangles_product2"
-        style="grid-column: 2 / 2; grid-row: 1/1" 
+        style="grid-column: 2 / 2; grid-row: 1/1; z-index: 1;" 
       >
-        Apples
-        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
-        <label>{{counters[1]}}</label>
-        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
+        Green Asparagus
+        <br><nobr><button type="button" class="productbuttonleft"><a href="/mga/">-</a></button>
+          <label>{{ counters[1] }}</label>
+          <button type="button" class="productbuttonright"><a href="/pga/">+</a></button></nobr>
       </div>
 
       <div
         class="Rectangles_product3"
-        style="grid-column: 3 / 3; grid-row: 1/1; background-color: white; z-index: -2;"
+        style="grid-column: 3 / 3; grid-row: 1/1; z-index: 1;"
       >
-        Cabagge
-        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
-        <label>{{counters[2]}}</label>
-        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
+        Organic Leek
+        <br><nobr><button type="button" class="productbuttonleft"><a href="/mol/">-</a></button>
+          <label>{{counters[2]}}</label>
+          <button type="button" class="productbuttonright"><a href="/pol/">+</a></button></nobr>
       </div>
 
       <div
         class="Rectangles_product4"
-        style="grid-column: 4 / 4; grid-row: 1/1; background-color: white; z-index: -2;"
+        style="grid-column: 4 / 4; grid-row: 1/1; z-index: 1;"
       >
-        Apples
-        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
-        <label>{{counters[3]}}</label>
-        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
+        Organic Carrots
+        <br><nobr><button type="button" class="productbuttonleft"><a href="/moc/">-</a></button>
+          <label>{{counters[3]}}</label>
+          <button type="button" class="productbuttonright"><a href="/poc/">+</a></button></nobr>
       </div>
 
       <div
         class="Rectangles_product5"
-        style="grid-column: 1 / 1; grid-row: 2/2; background-color: white; position:relative; top:130; z-index: -2;"
+        style="grid-column: 1 / 1; grid-row: 2/2; position:relative; top:130; z-index: 1;"
       >
-        Carrots
-        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
-        <label>{{counters[4]}}</label>
-        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
+        Organic Radish
+        <br><nobr><button type="button" class="productbuttonleft"><a href="/mor/">-</a></button>
+          <label>{{counters[4]}}</label>
+          <button type="button" class="productbuttonright"><a href="/por/">+</a></button></nobr>
       </div>
 
       <div
         class="Rectangles_product6"
-        style="grid-column: 2 / 2; grid-row: 2/2; background-color: white; position:relative; top:130; z-index: -2;"
+        style="grid-column: 2 / 2; grid-row: 2/2; position:relative; top:130; z-index: 1;"
       >
-        Seldery
-        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
-        <label>{{counters[5]}}</label>
-        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
+        Pak Soi
+        <br><nobr><button type="button" class="productbuttonleft"><a href="/mps/">-</a></button>
+          <label>{{counters[5]}}</label>
+          <button type="button" class="productbuttonright"><a href="/pps/">+</a></button></nobr>
       </div>
 
       <div
         class="Rectangles_product7"
-        style="grid-column: 3 / 3; grid-row: 2/2; background-color: white; position:relative; top:130; z-index: -2;"
+        style="grid-column: 3 / 3; grid-row: 2/2; position:relative; top:130; z-index: 1;"
       >
-        Pak soi
-        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
-        <label>{{counters[6]}}</label>
-        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
+        Red onions
+        <br><nobr><button type="button" class="productbuttonleft"><a href="/mro/">-</a></button>
+          <label>{{counters[6]}}</label>
+          <button type="button" class="productbuttonright"><a href="/pro/">+</a></button></nobr>
       </div>
       <div
         class="Rectangles_product8"
-        style="grid-column: 4 / 4; grid-row: 2/2; background-color: white; position:relative; top:130; z-index: -2;"
+        style="grid-column: 4 / 4; grid-row: 2/2; position:relative; top:130; z-index: 1;"
       >
-        Red onions
-        <br><button type="button" class="productbuttonleft"><a href="/minus/">-</a></button>
-        <label>{{counters[7]}}</label>
-        <button type="button" class="productbuttonright"><a href="/my-link/">+</a></button>
+        Chinese Cabbage
+        <br><nobr><button type="button" class="productbuttonleft"><a href="/mcc/">-</a></button>
+          <label>{{counters[7]}}</label>
+          <button type="button" class="productbuttonright"><a href="/pcc/">+</a></button></nobr>
       </div>
     </div>
     </div>

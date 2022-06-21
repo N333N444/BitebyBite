@@ -472,8 +472,10 @@ div.grid_product {
     grid-template-columns: 18vw 18vw 18vw 18vw;
     grid-template-rows: 40vh 40vh;
     margin-left:280px;
-    margin-top: 40px;
-    gap: 30px;  
+    margin-top: 200px;
+    gap: 30px; 
+    z-index: 1;
+    position:relative; 
 }
 /*Acc create */
 
@@ -623,4 +625,22 @@ div.grid_product {
     border: none;
     background: #E2E8F0;
     border-radius: 10px;
+}
+
+.productbuttonleft{
+    font-size: 21px;
+    color: black;
+    border-radius: 20px 0px 0px 20px;
+    border: 1px solid;
+    height: 30px;
+    width: 33px;
+}
+
+.productbuttonright{
+    font-size: 21px;
+    color: black;
+    border-radius: 0px 20px 20px 0px;
+    border: 1px solid;
+    height: 30px;
+    width: 33px;
 }

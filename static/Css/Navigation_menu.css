@@ -458,7 +458,7 @@ div.Rectangles_product3 {
 }
 div.grid_product {
     display: grid;
-    grid-template-columns: 18% 18% 18% 18%;
+    grid-template-columns: 200px 200px 200px 200px;
     grid-template-rows: 40% 40%;
     margin-left:250px;
     margin-top: 30px;

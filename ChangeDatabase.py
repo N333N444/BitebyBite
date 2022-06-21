@@ -1,12 +1,16 @@
 import sqlite3
 from flask import Flask, render_template
 app = Flask(__name__)
-counterlist = ["0","0","0","0","0"]
+counterlist = ["0","0","0","0","0","0","0","0"]
 
 
 @app.route('/')
 def index():
-  return render_template('index.html', counters = counterlist)
+  return render_template('index.html')
+
+@app.route('/Product.html/')
+def productpage():
+    return render_template('Product.html', counters = counterlist)
 
 print("**************")
 connection = sqlite3.connect('BitebyBite.db', check_same_thread=False)
@@ -39,6 +43,7 @@ def AddToCart(productname, Currentquantity):
     sql2 = {"c": productname}
     c.execute(sql1, sql2)
     Productsearch = c.fetchall()
+    print(productname)
     productname = str(Productsearch[0][0])
     productprice = float(Productsearch[0][1])
     cartlist = (productname, productprice, Currentquantity)
@@ -105,11 +110,7 @@ def CalcFinalPrice():
         totalprice = totalprice + (i[1] * i[2])    
     return totalprice
 
-
-@app.route('/my-link/')
-
-def pluscount():
-    productname="Aspergus"
+def pluscount(productname,i):
     sql1 = '''SELECT * FROM cart WHERE name=:c'''
     sql2 = {"c": productname}
     c.execute(sql1, sql2)
@@ -121,12 +122,10 @@ def pluscount():
         quantity = Productselect[0][2]
         Currentquantity = quantity + 1
     AddToCart(productname, Currentquantity)
-    counterlist[0] = str(Currentquantity)
-    return render_template("index.html", counters = counterlist)
+    counterlist[i] = str(Currentquantity)
+    
 
-@app.route('/minus/')
-def  mincount():
-    productname="Aspergus"
+def  mincount(productname, i):
     sql1 = '''SELECT * FROM cart WHERE name=:c'''
     sql2 = {"c": productname}
     c.execute(sql1, sql2)
@@ -137,41 +136,83 @@ def  mincount():
         quantity = Productselect[0][2]
         Currentquantity = quantity - 1
         RemoveFromCart(productname, Currentquantity)
-    counterlist[0] = str(Currentquantity)
-    return render_template("index.html", counters = counterlist)
+    counterlist[i] = str(Currentquantity)
+    
 
-@app.route('/my-link2/')
-def Pluscount():
-    productname="Apples"
-    sql1 = '''SELECT * FROM cart WHERE name=:c'''
-    sql2 = {"c": productname}
-    c.execute(sql1, sql2)
-    Productselect = c.fetchall() # our tuple [(Aspergus, 2.3)]
-    print("Plus count uitgevoerd")
-    if len(Productselect) == 0:
-        Currentquantity = 1
-    else:
-        quantity = Productselect[0][2]
-        Currentquantity = quantity + 1
-    AddToCart(productname, Currentquantity)
-    counterlist[1] = str(Currentquantity)
-    return render_template("index.html", counters = counterlist)
 
-@app.route('/minus2/')
-def  Mincount():
-    productname="Apples"
-    sql1 = '''SELECT * FROM cart WHERE name=:c'''
-    sql2 = {"c": productname}
-    c.execute(sql1, sql2)
-    Productselect = c.fetchall() 
-    if len(Productselect) == 0:
-        Currentquantity = 0
-    else:
-        quantity = Productselect[0][2]
-        Currentquantity = quantity - 1
-        RemoveFromCart(productname, Currentquantity)
-    counterlist[1] = str(Currentquantity)
-    return render_template("index.html", counters = counterlist)
+
+@app.route('/pwa/')
+def pwa():
+    pluscount('WhiteAsparagus', 0)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/mwa/')
+def mwa():
+    mincount('WhiteAsparagus', 0)
+    return render_template("Product.html", counters = counterlist)
+
+@app.route('/pga/')
+def pga():
+    pluscount('GreenAsparagus', 1)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/mga/')
+def mga():
+    mincount('GreenAsparagus', 1)
+    return render_template("Product.html", counters = counterlist)
+
+@app.route('/pol/')
+def pol():
+    pluscount('OrganicLeek', 2)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/mol/')
+def mol():
+    mincount('OrganicLeek', 2)
+    return render_template("Product.html", counters = counterlist)
+
+@app.route('/poc/')
+def poc():
+    pluscount('OrganicCarrots', 3)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/moc/')
+def moc():
+    mincount('OrganicCarrots', 3)
+    return render_template("Product.html", counters = counterlist)
+
+@app.route('/por/')
+def por():
+    pluscount('OrganicRadish', 4)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/mor/')
+def mor():
+    mincount('OrganicRadish', 4)
+    return render_template("Product.html", counters = counterlist)
+
+@app.route('/pps/')
+def pps():
+    pluscount('PakSoi', 5)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/mps/')
+def mps():
+    mincount('PakSoi', 5)
+    return render_template("Product.html", counters = counterlist)
+
+@app.route('/pro/')
+def pro():
+    pluscount('RedOnions', 6)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/mro/')
+def mro():
+    mincount('RedOnions', 6)
+    return render_template("Product.html", counters = counterlist)
+
+@app.route('/pcc/')
+def pcc():
+    pluscount('ChineseCabbage', 7)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/mcc/')
+def mcc():
+    mincount('ChineseCabbage', 7)
+    return render_template("Product.html", counters = counterlist)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
