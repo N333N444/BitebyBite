@@ -144,11 +144,11 @@ def  mincount(productname, i):
 @app.route('/pwa/')
 def pwa():
     pluscount('WhiteAsparagus', 0)
-    return render_template("Product.html", WA_ammount = counterlist[0], counters = counterlist)
+    return render_template("Product.html", counters = counterlist)
 @app.route('/mwa/')
 def mwa():
     mincount('WhiteAsparagus', 0)
-    return render_template("Product.html", WA_ammount = counterlist[0], counters = counterlist)
+    return render_template("Product.html", counters = counterlist)
 
 @app.route('/pga/')
 def pga():
@@ -167,6 +167,52 @@ def pol():
 def mol():
     mincount('OrganicLeek', 2)
     return render_template("Product.html", counters = counterlist)
+
+@app.route('/poc/')
+def poc():
+    pluscount('OrganicCarrots', 3)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/moc/')
+def moc():
+    mincount('OrganicCarrots', 3)
+    return render_template("Product.html", counters = counterlist)
+
+@app.route('/por/')
+def por():
+    pluscount('OrganicRadish', 4)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/mor/')
+def mor():
+    mincount('OrganicRadish', 4)
+    return render_template("Product.html", counters = counterlist)
+
+@app.route('/pps/')
+def pps():
+    pluscount('PakSoi', 5)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/mps/')
+def mps():
+    mincount('PakSoi', 5)
+    return render_template("Product.html", counters = counterlist)
+
+@app.route('/pro/')
+def pro():
+    pluscount('RedOnions', 6)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/mro/')
+def mro():
+    mincount('RedOnions', 6)
+    return render_template("Product.html", counters = counterlist)
+
+@app.route('/pcc/')
+def pcc():
+    pluscount('ChineseCabbage', 7)
+    return render_template("Product.html", counters = counterlist)
+@app.route('/mcc/')
+def mcc():
+    mincount('ChineseCabbage', 7)
+    return render_template("Product.html", counters = counterlist)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
