@@ -21,7 +21,7 @@
             <div class="Navbar_right">
                 <li style="float:right;"><a href="../PHP/Log_in.php">Log in</a></li>
                 <!-- <li style="float:right;"><a href=""><img src="../Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>                                         Moet worden aangepast als je bent ingelogd bent-->
-                <li style="float: right;"><a href="" class="Shopping_cart"><i class='fa fa-shopping-cart' style='color:#939393; font-size: 30px; margin-top: 4px;'></i></a></li>
+                <li style="float: right;"><a href="Shoppingcart.html" class="Shopping_cart"><i class='fa fa-shopping-cart' style='color:#939393; font-size: 30px; margin-top: 4px;'></i></a></li>
                 <li style="float: right;">
                     <form action="action.php" class="Search" >
                         <input type="text" placeholder="Search" class="Search_bar">
@@ -146,7 +146,46 @@
     <div class="Search_text" style= "left:306px; top:150px">
         Search results: 
     </div>
-    <i class="fa-solid fa-broccoli" style= "width:30px; height:30px; left:1062px; top:854px"></i>  
+    <i class="fa-solid fa-broccoli" style= "width:30px; height:30px; left:1062px; top:854px"></i>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:10px; top:170px">Course</div>
+    <select class="dropdown" style="height:58px; width:210px; left:10px; top:200px; background-color: white;" name="" onChange="this.name = this.value; document.getDDAll.submit()">
+        <option  value="Starter">Starter</option>
+        <option  value="Main">Main Course</option>
+        <option  value="Dessert">Dessert</option>
+    </select>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:10px; top:270px">Ease of Cooking</div>
+    <select class="dropdown" style="height:58px; width:210px; left:10px; top:300px; background-color: white;" name="" onChange="this.name = this.value; document.getDDAll.submit()">
+        <option  value="Easy">Easy</option>
+        <option  value="Moderate">Moderate</option>
+        <option  value="Difficult">Difficult</option>
+    </select>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:10px; top:370px">Preparation Time</div>
+    <select class="dropdown" style="height:58px; width:210px; left:10px; top:400px; background-color: white;" name="" onChange="this.name = this.value; document.getDDAll.submit()">
+        <option  value="Short">0-30 Min</option>
+        <option  value="Medium">30-60 Min</option>
+        <option  value="Long">60+ Min</option>
+    </select>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:10px; top:470px">Meal Type</div>
+    <select class="dropdown" style="height:58px; width:210px; left:10px; top:500px; background-color: white;" name="" onChange="this.name = this.value; document.getDDAll.submit()">
+        <option  value="Easy">Vegetarian</option>
+        <option  value="Moderate">Vegan</option>
+        <option  value="Difficult">Meat</option>
+        <option  value="Difficult">Fish</option>
+    </select>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:10px; top:570px">Amount of Calories</div>
+    <select class="dropdown" style="height:58px; width:210px; left:10px; top:600px; background-color: white;" name="" onChange="this.name = this.value; document.getDDAll.submit()">
+        <option  value="Easy">Low amount</option>
+        <option  value="Moderate">Medium amount</option>
+        <option  value="Difficult">High amount</option>
+    </select>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:10px; top:670px">Cuisine</div>
+    <select class="dropdown" style="height:58px; width:210px; left:10px; top:700px; background-color: white;" name="" onChange="this.name = this.value; document.getDDAll.submit()">
+        <option  value="Easy">Local</option>
+        <option  value="Moderate">Regional</option>
+        <option  value="Difficult">National</option>
+        <option  value="Difficult">International</option>
+    </select>
+    <div class="Continue_button" style="width:160px; height:55px; left:40px; top:940px; background-color: white;"> </div>
+    <div class="Normal_text" style="width:130px; height:45px; left:55px; top:950px; font-size: 22px;">Search</div>     
 </body>
-
 </html>
