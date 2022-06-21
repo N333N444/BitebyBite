@@ -1,16 +1,3 @@
 # BitebyBite
+Dit is een test branch dus het zou niks moeten veranderen in de originele boomstam
 
-
-Hey werkt deze branch?
-Hi
-Hey
-Hallo
-Dit is een update
-Zo moet het dus?
-
-Dit is de ultieme check of het werkt
-test
-
-Iets nieuws
-
-This is the repository of Bite by Bite

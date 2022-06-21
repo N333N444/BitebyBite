@@ -1,8 +1,8 @@
 <html>
 <head>
-    <link rel="stylesheet" href="Css/Log_in.css">
-    <link rel="stylesheet" href="Css/Index.css">
-    <link rel="stylesheet" href="Css/Navigation_menu.css">
+    <link rel="stylesheet" href="../static/Css/Index.css">
+    <link rel="stylesheet" href="../static/Css/Index.css">
+    <link rel="stylesheet" href="../static/Css/Navigation_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Byte by Byte</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -15,14 +15,14 @@
             <div class="Navbar_left">
                 <li><a href="index.html"><img src="Pictures/index/leeg_logo.png" class="Logo"></a></li>
                 <li><a class="Navigation_desktop_active" href="index.html">Home</a></li>
-                <li><a href="HTML/Recipes.html">Products</a></li>
+                <li><a href="/Product.html">Recipes</a></li>
                 <li><a href="HTML/Dishes.html">Dishes</a></li>
                 <li><a href="HTML/About_us.html">About us</a></li>
             </div>
             <div class="Navbar_right">
                 <li style="float:right;"><a href="PHP/Log_in.php">Log in</a></li>
                 <!-- <li style="float:right;"><a href=""><img src="Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>                                                                        Moet worden aangepast als je bent ingelogd bent-->
-                <li style="float: right;"><a href="HTML/Shoppingcart.html" class="Shopping_cart"><i class='fa fa-shopping-cart' style='color:#939393; font-size: 30px; margin-top: 4px;'></i></a></li>
+                <li style="float: right;"><a href="" class="Shopping_cart"><i class='fa fa-shopping-cart' style='color:#939393; font-size: 30px; margin-top: 4px;'></i></a></li>
                 <li style="float: right;">
                     <form action="action.php" class="Search" >
                         <input type="text" placeholder="Search" class="Search_bar">
@@ -56,9 +56,9 @@
         
         </div>
         <div id="linkies">
-            <li><a href="HTML/Recipes.html">Recipes</a></li>
-            <li><a href="HTML/Dishes.html">Dishes</a></li>
-            <li><a href="HTML/About_us.html">About us</a></li>
+            <li><a href="/Product.html/">Recipes</a></li>
+            <li><a href=../HTML/Dishes.html">Dishes</a></li>
+            <li><a href="../HTML/About_us.html">About us</a></li>
         </div>
     </div>
     <div class="Gray-container">
@@ -68,20 +68,20 @@
         </div>
         <div class="Scroling-pictures">
             <div class="Pictures fade">
-                <img src="Pictures/Cycle through/index1.jpg" style="width: 100%; border-radius: 30px;">
+                <img src="../static/Pictures/Cycle through/index1.jpg" style="width: 100%; border-radius: 30px;">
                 <div class="Pictures-text">Spices</div>
             </div>
             <div class="Pictures fade">
-                <img src="Pictures/Cycle through/index2.jpg" style="width: 100%; border-radius: 30px;">
+                <img src="../static/Pictures/Cycle through/index2.jpg" style="width: 100%; border-radius: 30px;">
                 <div class="Pictures-text">More spices</div>
             </div>
             <div class="Pictures fade">
-                <img src="Pictures/Cycle through/index3.jpg" style="width: 100%; border-radius: 30px;">
+                <img src="../static/Pictures/Cycle through/index3.jpg" style="width: 100%; border-radius: 30px;">
                 <div class="Pictures-text">Christmas meal</div>
             </div>
             <div class="Pictures fade">
-                <img src="Pictures/Cycle through/index4.jpg" style="width: 100%; border-radius: 30px;">
-                <div class="Pictures-text">Broccoli</div>
+                <img src="../static/Pictures/Cycle through/index4.jpg" style="width: 100%; border-radius: 30px;">
+                <div class="Pictures-text">Coliflower</div>
             </div>
         </div>
         <div style="text-align:center">
@@ -98,21 +98,11 @@
                 <p style="font-size: 20px ;">Find your next meal</p>
                 <div class="Container-1"></div>
                 <div class="Contrainer-green"></div>
-                <div class="Image-green">
-                    <li><a href="HTML/Dishes.html">Vegan meals</a></li>
-                    <li><a href="HTML/Dishes.html">Easy to make</a></li>
-                    <li><a href="HTML/Dishes.html">Low preperation time</a></li>
-                    <li><a href="HTML/Dishes.html">Low in calories</a></li>
-                </div>
             </div>
             <div class="Columns">
                 <p style="font-size: 20px ;">Find our vision</p>
                 <div class="Container-1"></div>
                 <div class="Contrainer-green"></div>
-                <div class="Image-green">
-                    <a href="HTML/About_us.html"><img src="Pictures/index/leeg_logo.png" class="Logo-2"></a>
-                    
-                </div>
             </div>
             <div class="Columns">
                 <p style="font-size: 20px ;">Find your next step</p>
@@ -165,11 +155,6 @@
         dots[PictureIndex-1].className += " active";
         } 
     </script>
-
-<button type="button" class="productbuttonleft"><a href="/minus/">Min</a></button>
-{{counters[0]}}
-<button type="button" class="productbuttonright"><a href="/my-link/">Plus</a></button>
-
 
 </body>
 

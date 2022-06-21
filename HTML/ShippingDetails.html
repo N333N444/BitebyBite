@@ -1,0 +1,102 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../Css/Navigation_menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Byte by Byte</title>
+    <script src="https://kit.fontawesome.com/7e36bcb000.js" crossorigin="anonymous"></script>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    <div class="index">
+        <ul id="Navigation_desktop">
+            <div class="Navbar_left">
+                <li><a href="../index.html"><img src="../Pictures/index/leeg_logo.png" class="Logo"></a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="Recipes.html">Recipes</a></li>
+                <li><a href="Dishes.html">Dishes</a></li>
+                <li><a href="About_us.html">About us</a></li>
+            </div>
+            <div class="Navbar_right">
+                <li style="float:right;"><a href="../PHP/Log_in.php">Log in</a></li>
+                <!-- <li style="float:right;"><a href=""><img src="../Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>                                         Moet worden aangepast als je bent ingelogd bent -->
+                <li style="float: right;"><a class="Navigation_desktop_active" href="" class="Shopping_cart"><i class='fa fa-shopping-cart' style='color:#939393; font-size: 30px; margin-top: 4px;'></i></a></li>
+                <li style="float: right;">
+                    <form action="action.php" class="Search" >
+                        <input type="text" placeholder="Search" class="Search_bar">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </li>
+            </div>
+        </ul>
+        <div id="Navigation_mobile">
+            <a href="javascript:void(0);" class="icon hamburgericon" onclick="showTHINGIEYESPLEASAE()">
+                <i class="fa fa-bars"></i></a>
+                <a class="On_hover_off">Recipes</a>
+                <div class="Shopping_cart_mobile">   
+                    <a href="" class="Shopping_cart_mobile"><i class='fa fa-shopping-cart' style='color:#939393;'></i></a>
+                </div>
+                <div class="Avater_mobile">
+                    <a href="" class="Avatar_mobile"><img src="Pictures/index/Basic_profilepicture.png" alt="Profiel foto"></a>
+                </div>
+
+            <script>
+                function showTHINGIEYESPLEASAE(){
+                var menu = document.getElementById('linkies')
+                if (menu.style.display === 'block'){
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block'
+                    }
+                }
+            </script>
+        
+        </div>
+        <div id="linkies">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Dishes.html">Dishes</a></li>
+            <li><a href="About_us.html">About us</a></li>
+        </div>
+    </div>
+</body>
+<body>
+    <div class="Rectangles_Timeline"></div>
+    <div class="Rectangles_Order"></div>
+    <div class="Rectangles_Account"></div>
+    <div class="Timeline_text" style="width: 355px; height: 87px; left:10; top: 80px;"> Byte by Byte <br> </div>
+    <div class="Timeline_text" style="width: 355px; height: 87px; left:10; top: 110px; font-size: 20px;font-style: italic;"> Start eating sustainable bite by bite </div>
+    <i class="fa-solid fa-square-check" style="left:725; top: 105px; position: absolute;"></i>
+    <i class="fa-solid fa-square-check" style="left:930; top: 105px; position: absolute;"></i>
+    <div class="Separation_line" style="width: 20px; left: 690px; top:112px"></div>
+    <div class="Separation_line" style="width: 20px; left: 750px; top:112px"></div>
+    <div class="Separation_line" style="width: 20px; left: 900px; top:112px"></div>
+    <div class="Separation_line" style="width: 20px; left: 950px; top:112px"></div>
+    <div class="Timeline_text2" style="Width:100px; height:87px; left:600px; top: 100px;">Account</div>
+    <div class="Timeline_text2" style="Width:100px; height:87px; left:800px; top: 100px; color: white;">Shipping</div>
+    <div class="Timeline_text2" style="Width:100px; height:87px; left:1000px; top: 100px">Payment</div>
+    <div class="Accountmain_text"> Shipping details</div>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:356px">
+        First line of address<br> <input type="text" id="FirstLine" value="" class="Text_button" style="height:58px; width:580px;" required>
+    </div>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:456px">
+        Street name<br> <input type="text" id="SN" value="" class="Text_button" style="height:58px; width:580px;" required>
+    </div>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:556px">
+        Postcode<br> <input type="text" id="ZIP" value="" class="Text_button" style="height:58px; width:580px;" required>
+    </div>
+    <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:656px">Select delivery</div>
+    <select class="dropdown" style="height:58px; width:580px; left:84px; top:690px" name="" onChange="this.name = this.value; document.getReportAll.submit()">
+        <option  value="report">Free delivery</option>
+        <option  value="leavereport">Paid delivery (+ €7,50)</option>
+    </select>
+    <div class="Shipping_line" style="width: 698px; left: 20px; top: 805px;">
+    </div>
+    <div class="Register_text" style= "width:352px; height:58px; left:300px; top:865px">
+        <a href="../index.html" style="text-decoration:none; color:#000000; font-size: 22px;"> Cancel order</a>
+    </div>
+    <div class="Continue_button" style="width:200px; height:55px; left:500px; top:855px"> </div>
+    <div class="Normal_text" style="width:200px; height:45px; left:500px; top:863px; font-size: 22px;"><a href="Payment.html" style="text-decoration:none; color:#000000;">Payment</a></div>
+    <div class="Register_text" style= "width:352px; height:58px; left:850px; top:280px; font-size: 27px;"> Order Review</div>
+</body>
