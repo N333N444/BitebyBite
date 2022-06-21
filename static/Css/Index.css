@@ -106,7 +106,7 @@
     background-color: #9DAD7F ;
     height: 200%;
     border-radius: 20px;
-    margin-top: -150px;
+    margin-top: -140px;
     margin-right: 10px;
 }
 
@@ -146,31 +146,28 @@
     background-color: #9DAD7F;
 }
 
+.Logo-2{
+    margin-top: -30px;
+    margin-left: -15px;
+    float: left;
+    width: 220px;
+    height: 180px;
+}
 
+.Image-green{
+    /* background-color: black; */
+    width: 75%;
+    float: right;
+    height: 200%;
+    border-radius: 20px;
+    margin-top: -150px;
+    margin-right: 10px;
+}
 
-
-.plus-minus-input {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  
-  .plus-minus-input .input-group-field {
-    text-align: center;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 1rem;
-  }
-  
-  .plus-minus-input .input-group-field::-webkit-inner-spin-button,
-  .plus-minus-input .input-group-field ::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-            appearance: none;
-  }
-  
-  .plus-minus-input .input-group-button .circle {
-    border-radius: 50%;
-    padding: 0.25em 0.8em;
-  }
-  
-  
+.Image-green li{
+    text-decoration: none !important;
+    list-style: none;
+    margin-bottom: 15px;
+    font-size: 17px;
+    color: black;
+}

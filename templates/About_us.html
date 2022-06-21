@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/Css/Navigation_menu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Byte by Byte</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+  <body>
+    <div class="index">
+      <ul id="Navigation_desktop">
+        <div class="Navbar_left">
+          <li>
+            <a href="/"
+              ><img src="../static/Pictures/index/leeg_logo.png" class="Logo"
+            /></a>
+          </li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/Product.html">Products</a></li>
+          <li><a href="/Dishes.html">Dishes</a></li>
+          <li>
+            <a class="Navigation_desktop_active" href="About_us.html"
+              >About us</a
+            >
+          </li>
+        </div>
+        <div class="Navbar_right">
+          <li style="float: right"><a href="../PHP/Log_in.php">Log in</a></li>
+          <!-- <li style="float:right;"><a href=""><img src="../Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>                                                 Moet worden aangepast als je bent ingelogd bent-->
+          <li style="float: right">
+            <a href="/cart" class="Shopping_cart"
+              ><i
+                class="fa fa-shopping-cart"
+                style="color: #939393; font-size: 30px; margin-top: 4px"
+              ></i
+            ></a>
+          </li>
+          <li style="float: right">
+            <form action="action.php" class="Search">
+              <input type="text" placeholder="Search" class="Search_bar" />
+              <button type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </li>
+        </div>
+      </ul>
+      <div id="Navigation_mobile">
+        <a
+          href="javascript:void(0);"
+          class="icon hamburgericon"
+          onclick="showTHINGIEYESPLEASAE()"
+        >
+          <i class="fa fa-bars"></i
+        ></a>
+        <a class="On_hover_off">About us</a>
+        <div class="Shopping_cart_mobile">
+          <a href="" class="Shopping_cart_mobile"
+            ><i class="fa fa-shopping-cart" style="color: #939393"></i
+          ></a>
+        </div>
+        <div class="Avater_mobile">
+          <a href="" class="Avatar_mobile"
+            ><img
+              src="../static/Pictures/index/Basic_profilepicture.png"
+              alt="Profiel foto"
+          /></a>
+        </div>
+
+        <script>
+          function showTHINGIEYESPLEASAE() {
+            var menu = document.getElementById("linkies");
+            if (menu.style.display === "block") {
+              menu.style.display = "none";
+            } else {
+              menu.style.display = "block";
+            }
+          }
+        </script>
+      </div>
+      <div id="linkies">
+        <li><a href="/">Home</a></li>
+        <li><a href="/Product.html">Products</a></li>
+        <li><a href="/Dishes.html">Dishes</a></li>
+      </div>
+    </div>
+    
+      
+    </div>
+    <div class="Rectangles_aboutus">
+      <b><p style = "margin-left:270px;margin-top:20px;font-size:30px;float:center">about us</p></b>
+      <p style = "margin-left:120px;margin-top:0px;font-size:20px;width:500px;float:center">
+        Bite by Bite wants to bring more sustainability to the table. 
+        We want to connect local farmers with consumers. 
+        We think there is a need to change. 
+        The climate is steadily worsening and sustainability is lowering. People who want to contribute to the goal but do not know how, are given the opportunity with our company, to change the future Bite by Bite.</p>
+        <img src="../static/Pictures/index/logo_aboutus.png" alt="aboutus1" style ="width:300px;margin-left: 950px;margin-top:-225px;background-color: #9DAD7F;">
+    </div>
+
+    <img src="../static/Pictures/index/aboutus1.png" alt="aboutus1" style ="margin-top:300px;width:740px;margin-left: 30px;">
+    
+    <div class="Rectangles_aboutus2">
+      <b><p style = "margin-left:220px;margin-top:20px;font-size:30px;">Mother Nature</p></b>
+      <p style = "margin-left:100px;margin-top:0px;font-size:20px;width:500px;float:center">Local food benefits the environment and wildlife. Well-managed farms provide ecosystem services: they conserve fertile soil, protect water sources, and sequester carbon from the atmosphere. The farm environment is a patchwork of fields, meadows, woods, ponds, and buildings that provide habitat for wildlife in our communities.
+
+        Ordering food from local farmers also reduces the  negative impact of export and import procedures because food doesnt have to travel all over the world. This helps keeping the co2 output down.</p>
+    </div>
+
+    <div class="Rectangles_aboutus3">
+      <b><p style = "margin-top:0px;margin-left:240px;font-size:30px;float:center"><br> Local Farmers</p></b>
+      <p style = "margin-left:120px;margin-top:-20px;font-size:20px;width:500px;float:center">Locally grown food supports the local economy. Supporting local farmers means supporting the local economy, which is major for any city. Money that is spent with local farmers and growers stays close to home and is reinvested with business and services within the community. It creates a cycle of local support!
+
+        Purchasing local produce promotes eating seasonally. Although, you can get a lot of produce year round at the grocery store that doesn’t mean it’s in season. Adding in-season foods to your diet enhances the nutrients and excitement of meals at home.</p>
+    </div>
+    <img src="../static/Pictures/index/aboutus2.png" alt="aboutus2" style ="width:750px;float:right;margin-top:-325px;margin-right: 26px;margin-bottom:20px">
+  </body>
+</html>

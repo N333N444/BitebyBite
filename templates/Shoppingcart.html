@@ -14,9 +14,9 @@
             <div class="Navbar_left">
                 <li><a href="/"><img src="../static/Pictures/index/leeg_logo.png" class="Logo"></a></li>
                 <li><a href="/">Home</a></li>
-                <li><a class="Navigation_desktop_active" href="Recipes.html">Recipes</a></li>
-                <li><a href="Dishes.html">Dishes</a></li>
-                <li><a href="About_us.html">About us</a></li>
+                <li><a href="/Products.html">Products</a></li>
+                <li><a href="/Dishes.html">Dishes</a></li>
+                <li><a href="/About_us.html">About us</a></li>
             </div>
             <div class="Navbar_right">
                 <li style="float:right;"><a href="../PHP/Log_in.php">Log in</a></li>
@@ -36,10 +36,10 @@
                 <i class="fa fa-bars"></i></a>
                 <a class="On_hover_off">Recipes</a>
                 <div class="Shopping_cart_mobile">   
-                    <a href="" class="Shopping_cart_mobile"><i class='fa fa-shopping-cart' style='color:#939393;'></i></a>
+                    <a href="/cart" class="Shopping_cart_mobile"><i class='fa fa-shopping-cart' style='color:#939393;'></i></a>
                 </div>
                 <div class="Avater_mobile">
-                    <a href="" class="Avatar_mobile"><img src="Pictures/index/Basic_profilepicture.png" alt="Profiel foto"></a>
+                    <a href="" class="Avatar_mobile"><img src="../static/Pictures/index/Basic_profilepicture.png" alt="Profiel foto"></a>
                 </div>
 
             <script>
@@ -56,8 +56,8 @@
         </div>
         <div id="linkies">
             <li><a href="/">Home</a></li>
-            <li><a href="Dishes.html">Dishes</a></li>
-            <li><a href="About_us.html">About us</a></li>
+            <li><a href="/Dishes.html">Dishes</a></li>
+            <li><a href="/About_us.html">About us</a></li>
         </div>
     </div>
 </body>
@@ -94,11 +94,11 @@
     </div>
     <div class="Continue_button" style="width:200px; height:55px; left:500px; top:855px"> </div>
     <div class="Normal_text" style="width:200px; height:45px; left:500px; top:863px; font-size: 22px;"><a href="ShippingDetails.html" style="text-decoration:none; color:#000000;">Shipping details</a></div>
-    <div class="Register_text" style= "width:352px; height:58px; left:850px; top:280px; font-size: 27px;"> Order Review</div>
+    <div class="Register_text" style= "width:352px; height:58px; left:850px; top:280px; font-size: 27px;"> Order Review
+        {% for i in productlist %}
+        <p>{{i[2]}} {{i[0]}} {{i[1]}}</p>
+        {%endfor%}
+    </div>
     
-
-    <p> HALLO</p>
-    {% for i in productlist %}
-    <p class="list">{{i[2]}} {{i[0]}} {{i[1]}}</p>
-    {%endfor%}
+    
 </body>

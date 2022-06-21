@@ -1,8 +1,9 @@
 import sqlite3
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+
 app = Flask(__name__)
 counterlist = ["0","0","0","0","0","0","0","0"]
-
+counterVal = 0
 
 @app.route('/')
 def index():
@@ -16,6 +17,26 @@ def productpage():
 def cart():
     productlist = ReadCartInfo()
     return render_template('Shoppingcart.html', productlist = productlist)
+
+@app.route('/About_us.html/')
+def About():
+    return render_template('About_us.html')
+
+@app.route('/Dishes.html/')
+def Dishes():
+    return render_template('Dishes.html')
+
+@app.route('/VeganKap.html/')
+def vegankapdish():
+    return render_template('VeganKap.html')
+
+@app.route('/omvk/', methods=['GET'])
+def omvk():
+    quantity = request.get('counterVal')
+    Currentquantity = float(quantity)
+    print(Currentquantity)
+    AddToCart("MealboxVeganKap", Currentquantity)
+    return render_template("Shoppingcart.html")
 
 print("**************")
 connection = sqlite3.connect('BitebyBite.db', check_same_thread=False)
@@ -74,7 +95,6 @@ def AddToCart(productname, Currentquantity):
         c.execute(sql1 + str(Currentquantity) + sql2 + productname + sql3)
         sql4 = '''UPDATE cart SET price = '''
         c.execute(sql4 + str(productprice) + sql2 + productname + sql3)
-
 
 def RemoveFromCart(productname, Currentquantity):
     #Search for your chosen product
@@ -138,8 +158,7 @@ def pluscount(productname,i):
         quantity = Productselect[0][2]
         Currentquantity = quantity + 1
     AddToCart(productname, Currentquantity)
-    counterlist[i] = str(Currentquantity)
-    
+    counterlist[i] = str(Currentquantity)  
 
 def  mincount(productname, i):
     sql1 = '''SELECT * FROM cart WHERE name=:c'''
@@ -154,7 +173,6 @@ def  mincount(productname, i):
         RemoveFromCart(productname, Currentquantity)
     counterlist[i] = str(Currentquantity)
     
-
 
 
 @app.route('/pwa/')

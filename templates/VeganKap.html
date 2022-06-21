@@ -1,0 +1,238 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../static/Css/Navigation_menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Byte by Byte</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    <div class="index">
+        <ul id="Navigation_desktop">
+            <div class="Navbar_left">
+                <li><a href="/"><img src="../static/Pictures/index/leeg_logo.png" class="Logo"></a></li>
+                <li><a href="/">Home</a></li>
+                <li><a class="Navigation_desktop_active" href="/Product.html">Products</a></li>
+                <li><a href="/Dishes.html">Dishes</a></li>
+                <li><a href="/About_us.html">About us</a></li>
+            </div>
+            <div class="Navbar_right">
+                <li style="float:right;"><a href="../static/PHP/Log_in.php">Log in</a></li>
+                <!-- <li style="float:right;"><a href=""><img src="../Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>                                         Moet worden aangepast als je bent ingelogd bent -->
+                <li style="float: right;"><a href="" class="Shopping_cart"><i class='fa fa-shopping-cart' style='color:#939393; font-size: 30px; margin-top: 4px;'></i></a></li>
+                <li style="float: right;">
+                    <form action="action.php" class="Search" >
+                        <input type="text" placeholder="Search" class="Search_bar">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </li>
+            </div>
+        </ul>
+        <div id="Navigation_mobile">
+            <a href="javascript:void(0);" class="icon hamburgericon" onclick="showTHINGIEYESPLEASAE()">
+                <i class="fa fa-bars"></i></a>
+                <a class="On_hover_off">Products</a>
+                <div class="Shopping_cart_mobile">   
+                    <a href="/cart" class="Shopping_cart_mobile"><i class='fa fa-shopping-cart' style='color:#939393;'></i></a>
+                </div>
+                <div class="Avater_mobile">
+                    <a href="" class="Avatar_mobile"><img src="..static/Pictures/index/Basic_profilepicture.png" alt="Profiel foto"></a>
+                </div>
+
+            <script>
+                function showTHINGIEYESPLEASAE(){
+                var menu = document.getElementById('linkies')
+                if (menu.style.display === 'block'){
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block'
+                    }
+                }
+            </script>
+        
+        </div>
+        <div id="linkies">
+            <li><a href="/">Home</a></li>
+            <li><a href="/Dishes.html">Dishes</a></li>
+            <li><a href="/About_us.html">About us</a></li>
+        </div>
+    </div>
+</body>
+<body>
+    <div class="Image">
+    <img src="../static/Pictures/dishes/Vegan_kapsalon.png" alt="Vegan_kapsalon" class="Image" style="position:absolute; width:664px; Height:auto;  left:56px; top: 187px;"></a>  
+    <div class="Title_recp" style= "height:36px; width:500px; left:30px; top:145px">
+        Vegan Kapsalon (Main course)
+    </div>
+    <div class="Rectangles_Recp" style="left: 800px; top:181px;"></div>
+    <div class="Rectangles_Ingre" style="left: 56px; top:600px"></div>
+    <div class="Recipe_text" style= "height:36px; width:150px; left:820px; top:196px">
+        Preparation
+    </div>
+    <div class="Preparation_line" style="width: 642px; left: 800px; top:243px"></div>
+    <div class="Rectangles_Mealbox" style="left: 380px; top:525px"></div>
+    <div class="Rectangles_Persons" style="left: 66px; top:525px"></div>
+    <div class="PeopleUp_button" style="left: 244px; top: 532px;">
+        <button onclick="incrementClick()" class="PeopleUp_button">^</button>
+    </div>
+    <div class="PeopleUp_button" style="left: 200px; top: 525px;">
+        <button onclick="OppositeClick()" class="PeopleUp_button">⌄</button>
+    </div>
+    <div class="BoxPer_text" style= "width:140px; left:461px; top:530px">
+    <form action="/omvk" method ="post">    
+        <button type="submit" value="1" name="counterVal" style="width:140px; left:461px; top:530px; background-color: #557174; border: none; height: 24px; color: white;"><a style="text-decoration:none; color:white" href="/omvk/">Order Mealbox</a></button>
+    </form>
+    </div>
+    <div>
+        <h3 id="counter-label" style="left: 100px; top: 512px;">1 Person</h3>
+    </div>
+    <div class="IngredientsTitl_text" style="left: 82px; top: 610px;">
+        Ingredients (Present in mealbox):
+    </div>
+    <div>
+        <h3 id="Ingredients_text" style="left: 80px; top: 615px;">50 gr - Carrots<br>75 gr - Vegetable cheese<br>87.5 gr - Vegan shoarma<br> 97.5 gr - Radish<br>100 gr  - Oven fries<br> 0.5 - Cucumber <br>0.25 Teaspoon(s) of Fresh parsley</h3>
+    </div>
+    <div class="Separation_line" style="width: 365px; left: 56px; top:805px"></div>
+    <div class="Separation_line" style="width: 297px; left: 421px; top:785px"></div>
+    <div class="Separation_line" style="width: 329px; left: 256px; top:764px; transform: rotate(90deg);"></div>
+    <div class="IngredientsExtra_text" style="left: 82px; top: 810px;">
+        Ingredients (Not present in mealbox):<br> Tablespoons white wine vinegar <br> Salt <br> Vegan garlic sauce
+    </div>
+    <div class="IngredientsExtra_text" style="left: 435px; top: 610px;">
+        Allergies: -
+    </div>
+    <div>
+        <h3 id="Ingredients_text2" style="left: 435px; top: 615px;">31 Kcal Carbohydrates<br>500 Kcal Calories<br>3.4 G Fibers<br>2.2 G Salt<br></h3>
+    </div>
+    <div class="IngredientsExtra_text" style="left: 435px; top: 790px;">
+        Preparation time: 25 min<br>(based on 2 persons)<br>Ease of making: Easy<br>Liked by <a style="font-weight: bold;">87</a>% of our enthusiastic cooks 
+    </div>
+    <div class="Preparation_text" style="left: 800px; top: 254px;">
+        *  Warm the oven at the temperature noted at the bag of oven fries.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 335px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 340px;">
+        *  Cut the radish in small parts.<br> If needed cut the big radishes in halfs first.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 420px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 425px;">
+        *  Grater the carrots and cut the cucumbers in thin half moons.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 505px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 510px;">
+        *  Add the rest of the salad ingredients (carrots, cucumbers, radish, vinegar) and toss them around in a bowl. Then store it in a sealed container in the refrigerator.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 655px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 660px;">
+        *  Divide the oven fries over the baking tray so that you have one layer. Bake according to the method of preparation. Toss once halfway through.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 775px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 780px;">
+        *  Take a large frying pan and fry the vegan shawarma on medium/high heat for about 5 to 10 minutes until they are golden brown.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 895px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 900px;">
+        *  Remove the fries from the oven and spread a layer of fries in an oven dish. Divide some cheese over it and then fries again. Repeat this until you have no more fries left.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 1045px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 1050px;">
+        *  Then divide the shawarma over it and some more cheese. Place the dish in the oven for about 5 minutes until the cheese has melted. While this is going on roughly chop the parsley.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 1200px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 1205px;">
+        *  As soon as the cheese has melted, divide the salad, parsley, garlic sauce and possibly sambal over it.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 1285px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 1290px; font-weight: bold;">
+        The meal is now ready !
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 1335px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 1340px;">
+        For an extra touch on the vegan kapsalon try adding some <a href="Dishes.html" style="text-decoration:none; font-weight: bold; font-style: italic; color:#000000;">selfmade vegan garlic sauce.</a>
+    </div>
+    <div class="Rectangles_Ingre" style="left: 56px; top:1000px"></div>
+    <div class="Preparation_text" style="left: 56px; top: 1010px; font-weight: bold;">
+        Could you help us out ?
+    </div>
+    <div class="Preparation_text" style="left: 65px; top: 1050px; text-align: left;">
+        Ease of making according to expectations.
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1090px;"></div>
+    <div class="Preparation_text" style="left: 65px; top: 1095px; text-align: left;">
+        Preparation time according to expectations.
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1140px;"></div>
+    <div class="Preparation_text" style="left: 65px; top: 1145px; text-align: left;">
+        A dish for everyone ?
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1185px;"></div>
+    <div class="Preparation_text" style="left: 65px; top: 1190px; text-align: left;">
+        Liked the dish that you prepared ?
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1230px;"></div>
+    <div class="Preparation_text" style="left: 56px; top: 1250px; font-weight: bold;">
+        Thank you and enjoy your meal !
+    </div>
+
+    
+    <script>
+        var counterVal = 1;
+        var EmptyList = []
+        const ingredients = {
+            87.5: " gr - Vegan shoarma",
+            100 : " gr - Oven fries",
+            97.5 : " gr - Radish",
+            50 : " gr - Carrots",
+            75 : " gr - Vegetable cheese",
+            0.5 : " - Cucumber",
+            0.25 : " Teaspoon(s) of Fresh Parshley",               
+        }
+        const IngrExtra = {
+            500: " Kcal Calories",
+            31: " Kcal Carbohydrates",
+            3.4: " G Fibers",
+            2.2: " G Salt",
+        }
+        
+            function incrementClick() {
+            updateDisplay(++counterVal);
+            DictionaryIngr(counterVal);
+            DictionaryExtra(counterVal);
+            }
+            function OppositeClick() {
+            updateDisplay(--counterVal);
+            DictionaryIngr(counterVal);
+            DictionaryExtra(counterVal);
+            }
+            function updateDisplay(val) {
+            if (val == 1)
+                document.getElementById("counter-label").innerHTML = val + " Person";
+            if (val < 1)
+                OppositeClick.disabled == true + updateDisplay(++counterVal);  
+            if (val > 1)
+                document.getElementById("counter-label").innerHTML = val + " Persons";
+            }
+            function DictionaryIngr(val) {
+            for (const key of Object.keys(ingredients))
+                EmptyList.push(key*val + ingredients[key] + "<br>");
+                console.log(EmptyList)
+                document.getElementById("Ingredients_text").innerHTML = EmptyList.join("");
+                EmptyList = [];
+            }
+            function DictionaryExtra(val) {
+            for (const key of Object.keys(IngrExtra))
+                EmptyList.push(key*val + IngrExtra[key] + "<br>");
+                console.log(EmptyList)
+                document.getElementById("Ingredients_text2").innerHTML = EmptyList.join("");
+                EmptyList = [];
+            }
+
+    </script>
+    
+</body>
+</body>
+</html>
+
+    

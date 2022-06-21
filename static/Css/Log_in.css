@@ -1,0 +1,119 @@
+.Log_in_form{
+    width: 480px;
+    height: 500px;
+    background-color: #C7CFB7;
+    border-radius: 2%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.Switch_button_box{
+    width: 220px;
+    margin: 35 auto;
+    position: relative;
+}
+
+.Switch{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#Switch_button{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #f7f7e8;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+#Second_box{
+    width: 230px;
+    margin: 35 auto;
+    position: relative;
+    transition: .5s;
+}
+
+#Second_switch_button{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #f7f7e8;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.Log_in{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.Text_field{
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 5px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.Submit_log_in{
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 65%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    background: #f7f7e8;
+    outline: none;
+    border-radius: 30px;
+}
+
+#Second_switch_button{
+    position: absolute;
+    width: 110px;
+    height: 37px;
+    background: #f7f7e8;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+#Log_in_id{
+    margin-left: 50px;
+    left: 50px;
+}
+
+#Register_id{
+    margin-top: -30px;
+    left: 500px;
+    margin-left: 50px
+}
+
+#Register_id_company{
+    margin-top: -30px;
+    left: 500px;
+    margin-left: 50px;
+}
+
+#Second_box{
+    margin-top: -25px;
+    left: 500px;
+}
