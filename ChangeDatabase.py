@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 counterlist = ["0","0","0","0","0","0","0","0"]
+mbcounterlist = ["1","1","1","1","1","1","1","1"]
 counterVal = 0
 
 @app.route('/')
@@ -15,8 +16,9 @@ def productpage():
 
 @app.route('/cart/')
 def cart():
+    totalprice = CalcFinalPrice()
     productlist = ReadCartInfo()
-    return render_template('Shoppingcart.html', productlist = productlist)
+    return render_template('Shoppingcart.html', productlist = productlist, total = totalprice)
 
 @app.route('/About_us.html/')
 def About():
@@ -28,14 +30,13 @@ def Dishes():
 
 @app.route('/VeganKap.html/')
 def vegankapdish():
-    return render_template('VeganKap.html')
+    return render_template('VeganKap.html', mbcounter = mbcounterlist)
 
-@app.route('/omvk/', methods=['GET'])
+@app.route('/omvk/', methods=['POST'])
 def omvk():
-    quantity = request.get('counterVal')
-    Currentquantity = float(quantity)
-    print(Currentquantity)
-    AddToCart("MealboxVeganKap", Currentquantity)
+    quantity = request.form.get('Val')
+    print("deze:", quantity)
+    AddToCart("MealboxVeganKap", quantity)
     return render_template("Shoppingcart.html")
 
 print("**************")
@@ -47,6 +48,14 @@ def ReadCartInfo():
     sql = '''SELECT * FROM '''
     c.execute(sql+table)
     selectedtable = c.fetchall()
+    for i in range(0, len(selectedtable)):
+        x = list(selectedtable[i]) #make (asp, 1.0,0) a list
+        z = str(x[0]) # make asp a sting
+        y = z.replace("_", " ")
+        print(y) # replace string
+        x[0] = y # replace asp with correct word in list
+        print(x)
+        selectedtable[i] = tuple(x)
     productlist = selectedtable
     return productlist
 
@@ -77,8 +86,8 @@ def AddToCart(productname, Currentquantity):
     sql2 = {"c": productname}
     c.execute(sql1, sql2)
     Productsearch = c.fetchall()
-    print(productname)
     productname = str(Productsearch[0][0])
+    
     productprice = Currentquantity * float(Productsearch[0][1])
     cartlist = (productname, productprice, Currentquantity)
     # check if the product is in the cart
@@ -143,7 +152,8 @@ def CalcFinalPrice():
     print(results)
     totalprice = 0
     for i in results:
-        totalprice = totalprice + (i[1] * i[2])    
+        totalprice = float(totalprice + i[1])   
+    totalprice = "%.2f" % totalprice
     return totalprice
 
 def pluscount(productname,i):
@@ -151,7 +161,6 @@ def pluscount(productname,i):
     sql2 = {"c": productname}
     c.execute(sql1, sql2)
     Productselect = c.fetchall() # our tuple [(Aspergus, 2.3)]
-    print("Plus count uitgevoerd")
     if len(Productselect) == 0:
         Currentquantity = 1
     else:
@@ -173,78 +182,114 @@ def  mincount(productname, i):
         RemoveFromCart(productname, Currentquantity)
     counterlist[i] = str(Currentquantity)
     
+def mbmincount(productname, i):
+    sql1 = '''SELECT * FROM mbcounter WHERE name=:c'''
+    sql2 = {"c": productname}
+    c.execute(sql1, sql2)
+    Mbselect = c.fetchall()
+    if Mbselect[0][1] > 1:
+        Currentquantity = Mbselect[0][1] - 1
+        mbcounterlist[i]= Currentquantity
+        sql1 = '''UPDATE mbcounter SET amount  = '''
+        sql2 = ''' WHERE name="'''
+        sql3 = '''"'''
+        c.execute(sql1 + str(Currentquantity) + sql2 + productname + sql3)
 
+def mbpluscount(productname, i):
+    sql1 = '''SELECT * FROM mbcounter WHERE name=:c'''
+    sql2 = {"c": productname}
+    c.execute(sql1, sql2)
+    Mbselect = c.fetchall()
+    Currentquantity = Mbselect[0][1] + 1
+    mbcounterlist[i]= Currentquantity
+    sql1 = '''UPDATE mbcounter SET amount  = '''
+    sql2 = ''' WHERE name="'''
+    sql3 = '''"'''
+    c.execute(sql1 + str(Currentquantity) + sql2 + productname + sql3)
+    print(mbcounterlist[i])
+
+@app.route('/pmb/')
+def pmb():
+    productname = "MealboxVeganKap"
+    mbpluscount(productname, 0)
+    return render_template("VeganKap.html", mbcounter = mbcounterlist)
+
+@app.route('/mmb/')
+def mmb():
+    productname = "MealboxVeganKap"
+    mbmincount(productname, 0)
+    return render_template("VeganKap.html", mbcounter = mbcounterlist)
 
 @app.route('/pwa/')
 def pwa():
-    pluscount('WhiteAsparagus', 0)
+    pluscount('White_Asparagus', 0)
     return render_template("Product.html", counters = counterlist)
 @app.route('/mwa/')
 def mwa():
-    mincount('WhiteAsparagus', 0)
+    mincount('White_Asparagus', 0)
     return render_template("Product.html", counters = counterlist)
 
 @app.route('/pga/')
 def pga():
-    pluscount('GreenAsparagus', 1)
+    pluscount('Green_Asparagus', 1)
     return render_template("Product.html", counters = counterlist)
 @app.route('/mga/')
 def mga():
-    mincount('GreenAsparagus', 1)
+    mincount('Green_Asparagus', 1)
     return render_template("Product.html", counters = counterlist)
 
 @app.route('/pol/')
 def pol():
-    pluscount('OrganicLeek', 2)
+    pluscount('Organic_Leek', 2)
     return render_template("Product.html", counters = counterlist)
 @app.route('/mol/')
 def mol():
-    mincount('OrganicLeek', 2)
+    mincount('Organic_Leek', 2)
     return render_template("Product.html", counters = counterlist)
 
 @app.route('/poc/')
 def poc():
-    pluscount('OrganicCarrots', 3)
+    pluscount('Organic_Carrots', 3)
     return render_template("Product.html", counters = counterlist)
 @app.route('/moc/')
 def moc():
-    mincount('OrganicCarrots', 3)
+    mincount('Organic_Carrots', 3)
     return render_template("Product.html", counters = counterlist)
 
 @app.route('/por/')
 def por():
-    pluscount('OrganicRadish', 4)
+    pluscount('Organic_Radish', 4)
     return render_template("Product.html", counters = counterlist)
 @app.route('/mor/')
 def mor():
-    mincount('OrganicRadish', 4)
+    mincount('Organic_Radish', 4)
     return render_template("Product.html", counters = counterlist)
 
 @app.route('/pps/')
 def pps():
-    pluscount('PakSoi', 5)
+    pluscount('Pak_Soi', 5)
     return render_template("Product.html", counters = counterlist)
 @app.route('/mps/')
 def mps():
-    mincount('PakSoi', 5)
+    mincount('Pak_Soi', 5)
     return render_template("Product.html", counters = counterlist)
 
 @app.route('/pro/')
 def pro():
-    pluscount('RedOnions', 6)
+    pluscount('Red_Onions', 6)
     return render_template("Product.html", counters = counterlist)
 @app.route('/mro/')
 def mro():
-    mincount('RedOnions', 6)
+    mincount('Red_Onions', 6)
     return render_template("Product.html", counters = counterlist)
 
 @app.route('/pcc/')
 def pcc():
-    pluscount('ChineseCabbage', 7)
+    pluscount('Chinese_Cabbage', 7)
     return render_template("Product.html", counters = counterlist)
 @app.route('/mcc/')
 def mcc():
-    mincount('ChineseCabbage', 7)
+    mincount('Chinese_Cabbage', 7)
     return render_template("Product.html", counters = counterlist)
 
 
@@ -267,6 +312,6 @@ if __name__ == '__main__':
 
 
 
-# ReadDatabase()
+
 connection.commit()
 connection.close()
