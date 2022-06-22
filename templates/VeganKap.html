@@ -75,14 +75,15 @@
     <div class="Rectangles_Mealbox" style="left: 380px; top:525px"></div>
     <div class="Rectangles_Persons" style="left: 66px; top:525px"></div>
     <div class="PeopleUp_button" style="left: 244px; top: 532px;">
-        <button onclick="incrementClick()" class="PeopleUp_button">^</button>
+        <label>{{ mbcounter[0] }}</label>
+        <button type="button" class="PeopleUp_button"><a href="/pmb/">^</a></button>
     </div>
     <div class="PeopleUp_button" style="left: 200px; top: 525px;">
-        <button onclick="OppositeClick()" class="PeopleUp_button">⌄</button>
+        <button onclick="OppositeClick()" class="PeopleUp_button"><a href="/mmb/">⌄</a></button>
     </div>
     <div class="BoxPer_text" style= "width:140px; left:461px; top:530px">
     <form action="/omvk" method ="post">    
-        <button type="submit" value="1" name="counterVal" style="width:140px; left:461px; top:530px; background-color: #557174; border: none; height: 24px; color: white;"><a style="text-decoration:none; color:white" href="/omvk/">Order Mealbox</a></button>
+        <button type="submit" value="Hallo" name="Val" style="width:140px; left:461px; top:530px; background-color: #557174; border: none; height: 24px; color: white;"><a style="text-decoration:none; color:white" href="/omvk/">Order Mealbox</a></button>
     </form>
     </div>
     <div>

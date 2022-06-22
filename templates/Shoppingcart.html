@@ -14,7 +14,7 @@
             <div class="Navbar_left">
                 <li><a href="/"><img src="../static/Pictures/index/leeg_logo.png" class="Logo"></a></li>
                 <li><a href="/">Home</a></li>
-                <li><a href="/Products.html">Products</a></li>
+                <li><a href="/Product.html">Products</a></li>
                 <li><a href="/Dishes.html">Dishes</a></li>
                 <li><a href="/About_us.html">About us</a></li>
             </div>
@@ -98,6 +98,7 @@
         {% for i in productlist %}
         <p>{{i[2]}} {{i[0]}} {{i[1]}}</p>
         {%endfor%}
+        <p>Totalprice: {{total}}</p>
     </div>
     
     
