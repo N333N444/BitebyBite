@@ -12,9 +12,9 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/Product.html/')
+@app.route('templates/Product.html/')
 def productpage():
-    return render_template('Product.html', counters=counterlist)
+    return render_template('templates/Product.html', counters=counterlist)
 
 
 @app.route('/cart/')
