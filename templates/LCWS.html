@@ -1,0 +1,240 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../static/Css/Navigation_menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Byte by Byte</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    <div class="index">
+        <ul id="Navigation_desktop">
+            <div class="Navbar_left">
+                <li><a href="../index.html"><img src="../static/Pictures/index/leeg_logo.png" class="Logo"></a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a class="Navigation_desktop_active" href="Product.html">Products</a></li>
+                <li><a href="Dishes.html">Dishes</a></li>
+                <li><a href="About_us.html">About us</a></li>
+            </div>
+            <div class="Navbar_right">
+                <li style="float:right;"><a href="../PHP/Log_in.php">Log in</a></li>
+                <!-- <li style="float:right;"><a href=""><img src="../Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>                                         Moet worden aangepast als je bent ingelogd bent -->
+                <li style="float: right;"><a href="" class="Shopping_cart"><i class='fa fa-shopping-cart' style='color:#939393; font-size: 30px; margin-top: 4px;'></i></a></li>
+                <li style="float: right;">
+                    <form action="action.php" class="Search" >
+                        <input type="text" placeholder="Search" class="Search_bar">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </li>
+            </div>
+        </ul>
+        <div id="Navigation_mobile">
+            <a href="javascript:void(0);" class="icon hamburgericon" onclick="showTHINGIEYESPLEASAE()">
+                <i class="fa fa-bars"></i></a>
+                <a class="On_hover_off">Products</a>
+                <div class="Shopping_cart_mobile">   
+                    <a href="" class="Shopping_cart_mobile"><i class='fa fa-shopping-cart' style='color:#939393;'></i></a>
+                </div>
+                <div class="Avater_mobile">
+                    <a href="" class="Avatar_mobile"><img src="../static/Pictures/index/Basic_profilepicture.png" alt="Profiel foto"></a>
+                </div>
+
+            <script>
+                function showTHINGIEYESPLEASAE(){
+                var menu = document.getElementById('linkies')
+                if (menu.style.display === 'block'){
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block'
+                    }
+                }
+            </script>
+        
+        </div>
+        <div id="linkies">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Dishes.html">Dishes</a></li>
+            <li><a href="About_us.html">About us</a></li>
+        </div>
+    </div>
+</body>
+<body>
+    <div class="Image">
+    <img src="../static/Pictures/dishes/preischotel met zalm.png" alt="Vegan_kapsalon" class="Image" style="position:absolute; width:664px; Height:auto;  left:56px; top: 187px;"></a>  
+    <div class="Title_recp" style= "height:36px; width:700px; left:75px; top:145px; text-align: left;">
+        Leek casserole with salmon (Main course)
+    </div>
+    <div class="Rectangles_Recp" style="left: 800px; top:181px; height: 1100px;"></div>
+    <div class="Rectangles_Ingre" style="left: 56px; top:600px; height: 380px;"></div>
+    <div class="Recipe_text" style= "height:36px; width:150px; left:820px; top:196px">
+        Preparation
+    </div>
+    <div class="Preparation_line" style="width: 642px; left: 800px; top:243px"></div>
+    <div class="Rectangles_Mealbox" style="left: 380px; top:525px"></div>
+    <div class="Rectangles_Persons" style="left: 66px; top:525px"></div>
+    <div class="PeopleUp_button" style="left: 244px; top: 532px;">
+        <button onclick="incrementClick()" class="PeopleUp_button">^</button>
+    </div>
+    <div class="PeopleUp_button" style="left: 200px; top: 525px;">
+        <button onclick="OppositeClick()" class="PeopleUp_button">⌄</button>
+    </div>
+    <div class="BoxPer_text" href="Shoppingcart.html"style= "width:140px; left:461px; top:530px">
+        <button onclick="OrderButton()"  style="width:140px; left:461px; top:530px; background-color: #557174; border: none; height: 24px; color: white;"><a href="Shoppingcart.html" onclick="return OrderButton();">Order Mealbox</a></button>
+    </div>
+    <div>
+        <h3 id="counter-label" style="left: 100px; top: 512px;">1 Person</h3>
+    </div>
+    <div class="IngredientsTitl_text" style="left: 82px; top: 610px;">
+        Ingredients (Present in mealbox):
+    </div>
+    <div>
+        <h3 id="Ingredients_text" style="left: 80px; top: 615px;">100 gr - Salmon fillet<br>125 gr  - Leek<br>200 - Potato slices<br>0.25 Hand of grated cheese<br>62.5 gr - Crème fraiche<br>0.75 - Egg(s)<br>0.5 Teaspoon(s) of Fresh parslay</h3>
+    </div>
+    <div class="Separation_line" style="width: 365px; left: 56px; top:805px"></div>
+    <div class="Separation_line" style="width: 297px; left: 421px; top:825px"></div>
+    <div class="Separation_line" style="width: 379px; left: 232px; top:789px; transform: rotate(90deg);"></div>
+    <div class="IngredientsExtra_text" style="left: 82px; top: 810px;">
+        Ingredients (Not present in mealbox):<br> Tablespoon(s) mustard <br> Salt and pepper <br> Olive oil
+    </div>
+    <div class="IngredientsExtra_text" style="left: 435px; top: 610px;">
+        Allergies: Salmon, Lactose, Eggs, Gluten
+    </div>
+    <div>
+        <h3 id="Ingredients_text2" style="left: 435px; top: 640px;">4 g Sugar<br>5 g Fibers<br>20 Kcal Carbohydrates<br>39 g Protein<br>52 g Fat<br>714 Kcal Nutrition<br>0.5 g Salt</h3>
+    </div>
+    <div class="IngredientsExtra_text" style="left: 435px; top: 830px;">
+        Preparation time: 20 min<br>(based on 2 persons)<br>Ease of making: Moderate<br>Liked by <a style="font-weight: bold;">84</a>% of our enthusiastic cooks 
+    </div>
+    <div class="Preparation_text" style="left: 800px; top: 254px;">
+        *  Preheat the oven to 180 degrees and oil an baking dish for the casserole.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 335px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 340px;">
+        *  Boil the potato slices in a large pan of water for 5 minutes and then drain the water.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 420px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 425px;">
+        *  Grater the carrots and cut the cucumbers in thin half moons.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 505px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 510px;">
+        *  Fry the leek briefly in a pan with one tablespoon of olive oil for 5 minutes until it starts to soften slightly.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 630px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 635px;">
+        *  In a bowl, whisk together the crème frache, eggs, mustard, pepper, salt and parsley.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 720px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 725px;">
+        *  Cut the salmon in half horizontally once or twice to get thin slices and spread half of the potato slices over the bottom of the oiled baking dish.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 845px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 850px;">
+        *  Sprinkle with a little bit of salt and pepper. Place the salmon and spoon the fried leek over this.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 930px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 935px;">
+        *  Pour half of the egg mixture over this (Made three steps ago).
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 1020px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 1025px;">
+        *  Cover with potato slices and pour over the rest of the egg mixture and sprinkle with some cheese. Put the casserole in the oven for around 30 min until the cheese has melted and the potato slices are well done.
+    </div>
+    <div class="Separation_line" style="width: 646px; left: 800px; top: 1215px;"></div>
+    <div class="Preparation_text" style="left: 800px; top: 1220px; font-weight: bold;">
+        The meal is now ready !
+    </div>
+    <div class="Rectangles_Ingre" style="left: 56px; top:1000px"></div>
+    <div class="Preparation_text" style="left: 56px; top: 1010px; font-weight: bold;">
+        Could you help us out ?
+    </div>
+    <div class="Preparation_text" style="left: 65px; top: 1050px; text-align: left;">
+        Ease of making according to expectations.
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1090px;"></div>
+    <div class="Preparation_text" style="left: 65px; top: 1095px; text-align: left;">
+        Preparation time according to expectations.
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1140px;"></div>
+    <div class="Preparation_text" style="left: 65px; top: 1145px; text-align: left;">
+        A dish for everyone ?
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1185px;"></div>
+    <div class="Preparation_text" style="left: 65px; top: 1190px; text-align: left;">
+        Liked the dish that you prepared ?
+    </div>
+    <div class="Separation_line" style="width: 662px; left: 56px; top: 1230px;"></div>
+    <div class="Preparation_text" style="left: 56px; top: 1250px; font-weight: bold;">
+        Thank you and enjoy your meal !
+    </div>
+
+    
+    <script>
+        var counterVal = 1;
+        var MealboxVal = 0
+        var EmptyList = []
+        var cart
+        const ingredients = {
+            0.25: " Hand of grated cheese",
+            200 : " gr - Potato slices",
+            125 : " gr - Leek",
+            100 : " gr - Salmon fillet",
+            62.5 : " gr - Crème fraiche",
+            0.75 : "- Egg(s)",
+            0.5 : " Teaspoon(s) of Fresh Parshley",               
+        }
+        const IngrExtra = {
+            714: " Kcal Nutrition",
+            4: " g Sugar", 
+            20: " Kcal Carbohydrates",
+            39: " g Protein",
+            52: " g Fat",
+            5: " g Fibers",
+            0.5: " g Salt",
+        }
+        
+            function incrementClick() {
+            updateDisplay(++counterVal);
+            DictionaryIngr(counterVal);
+            DictionaryExtra(counterVal);
+            OrderButton(counterVal);
+            }
+            function OppositeClick() {
+            updateDisplay(--counterVal);
+            DictionaryIngr(counterVal);
+            DictionaryExtra(counterVal);
+            OrderButton(counterVal);
+            }
+            function updateDisplay(val) {
+            if (val == 1)
+                document.getElementById("counter-label").innerHTML = val + " Person";
+            if (val < 1)
+                OppositeClick.disabled == true + updateDisplay(++counterVal);  
+            if (val > 1)
+                document.getElementById("counter-label").innerHTML = val + " Persons";
+            }
+            function DictionaryIngr(val) {
+            for (const key of Object.keys(ingredients))
+                EmptyList.push(key*val + ingredients[key] + "<br>");
+                document.getElementById("Ingredients_text").innerHTML = EmptyList.join("");
+                EmptyList = [];
+            }
+            function DictionaryExtra(val) {
+            for (const key of Object.keys(IngrExtra))
+                EmptyList.push(key*val + IngrExtra[key] + "<br>");
+                document.getElementById("Ingredients_text2").innerHTML = EmptyList.join("");
+                EmptyList = [];
+            }
+            function OrderButton(val) {
+                console.log(val)
+                localStorage.setItem("LCWS", val + " test");
+                
+
+            }    
+    </script>
+</body>
+</html>
+
+    

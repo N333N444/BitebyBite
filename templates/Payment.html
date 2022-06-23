@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="stylesheet" href="..static/Css/Navigation_menu.css">
+    <link rel="stylesheet" href="../Css/Navigation_menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Byte by Byte</title>
     <script src="https://kit.fontawesome.com/7e36bcb000.js" crossorigin="anonymous"></script>
@@ -12,7 +12,7 @@
     <div class="index">
         <ul id="Navigation_desktop">
             <div class="Navbar_left">
-                <li><a href="index.html"><img src="../static/Pictures/index/leeg_logo.png" class="Logo"></a></li>
+                <li><a href="index.html"><img src="../stactic/Pictures/index/leeg_logo.png" class="Logo"></a></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Recipes.html">Recipes</a></li>
                 <li><a href="Dishes.html">Dishes</a></li>
@@ -39,7 +39,7 @@
                     <a href="" class="Shopping_cart_mobile"><i class='fa fa-shopping-cart' style='color:#939393;'></i></a>
                 </div>
                 <div class="Avater_mobile">
-                    <a href="" class="Avatar_mobile"><img src="static/Pictures/index/Basic_profilepicture.png" alt="Profiel foto"></a>
+                    <a href="" class="Avatar_mobile"><img src="/static/Pictures/index/Basic_profilepicture.png" alt="Profiel foto"></a>
                 </div>
 
             <script>
@@ -74,29 +74,31 @@
     <div class="Separation_line" style="width: 20px; left: 900px; top:112px"></div>
     <div class="Separation_line" style="width: 20px; left: 950px; top:112px"></div>
     <div class="Timeline_text2" style="Width:100px; height:87px; left:600px; top: 100px;">Account</div>
-    <div class="Timeline_text2" style="Width:100px; height:87px; left:800px; top: 100px; color: white;">Shipping</div>
-    <div class="Timeline_text2" style="Width:100px; height:87px; left:1000px; top: 100px">Payment</div>
-    <div class="Accountmain_text"> Shipping details</div>
-    <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:356px">
-        First line of address<br> <input type="text" id="FirstLine" value="" class="Text_button" style="height:58px; width:580px;" required>
+    <div class="Timeline_text2" style="Width:100px; height:87px; left:800px; top: 100px;">Shipping</div>
+    <div class="Timeline_text2" style="Width:100px; height:87px; left:1000px; top: 100px; color: white;">Payment</div>
+    <div class="Accountmain_text"> Payment details</div>
+    <div class= "Account_Textbox" style="left:84px; top:356px">
+        Name on card<br> <input type="text" id="NoC" value="" class="Text_button" style="height:58px; width:580px;" required>
     </div>
-    <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:456px">
-        Street name<br> <input type="text" id="SN" value="" class="Text_button" style="height:58px; width:580px;" required>
+    <div class= "Account_Textbox" style="left:84px; top:456px">
+        Card number<br> <input type="text" id="Card number" value="" class="Text_button" style="height:58px; width:580px;" required>
     </div>
-    <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:556px">
-        Postcode<br> <input type="text" id="ZIP" value="" class="Text_button" style="height:58px; width:580px;" required>
+    <div class= "Account_Textbox" style="left:84px; top:556px">
+        CVC<br> <input type="text" id="CVC" value="" class="Text_button" style="height:58px; width:580px;" required>
     </div>
-    <div class= "Account_Textbox" style="height:36px; width:200px; left:84px; top:656px">Select delivery</div>
-    <select class="dropdown" style="height:58px; width:580px; left:84px; top:690px" name="" onChange="this.name = this.value; document.getReportAll.submit()">
-        <option  value="report">Free delivery</option>
-        <option  value="leavereport">Paid delivery (+ €7,50)</option>
-    </select>
+    <div class= "Account_Textbox" style=" left:84px; top:656px">
+        Expiration<br> <input type="text" id="EX1" value="" class="Text_button" style="height:58px; width:80px;" required>
+    </div>
+    <div class= "Account_Textbox" style=" left:200px; top:656px">
+        <br> <input type="text" id="EX2" value="" class="Text_button" style="height:58px; width:80px;" required>
+    </div>
+    <div class="Separation_line" style="width: 30px; left: 166px; top:720px; transform: rotate(125deg);"></div>
     <div class="Shipping_line" style="width: 698px; left: 20px; top: 805px;">
     </div>
     <div class="Register_text" style= "width:352px; height:58px; left:300px; top:865px">
         <a href="index.html" style="text-decoration:none; color:#000000; font-size: 22px;"> Cancel order</a>
     </div>
     <div class="Continue_button" style="width:200px; height:55px; left:500px; top:855px"> </div>
-    <div class="Normal_text" style="width:200px; height:45px; left:500px; top:863px; font-size: 22px;"><a href="Payment.html" style="text-decoration:none; color:#000000;">Payment</a></div>
+    <div class="Normal_text" style="width:200px; height:45px; left:500px; top:863px; font-size: 22px;"><a href="Payment.html" style="text-decoration:none; color:#000000;">Complete order</a></div>
     <div class="Register_text" style= "width:352px; height:58px; left:850px; top:280px; font-size: 27px;"> Order Review</div>
 </body>
