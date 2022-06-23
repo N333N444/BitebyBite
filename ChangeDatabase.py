@@ -14,7 +14,8 @@ def index():
 
 @app.route('templates/Product.html/')
 def productpage():
-    return render_template('templates/Product.html', counters=counterlist)
+    print("useapproute")
+    return render_template('/templates/Product.html', counters=counterlist)
 
 
 @app.route('/cart/')
