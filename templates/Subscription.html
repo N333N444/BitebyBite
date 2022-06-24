@@ -1,0 +1,142 @@
+<html>
+<head>
+    <link rel="stylesheet" href="../Css/Navigation_menu.css">
+    <link rel="stylesheet" href="../Css/Subscription.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/7e36bcb000.js" crossorigin="anonymous"></script>
+    <title>Byte by Byte</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    <div class="index">
+        <ul id="Navigation_desktop">
+            <div class="Navbar_left">
+                <li><a href="../index.html"><img src="../Pictures/index/leeg_logo.png" class="Logo"></a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="Product.html">Products</a></li>
+                <li><a href="Dishes.html">Dishes</a></li>
+                <li><a href="About_us.html">About us</a></li>
+            </div>
+            <div class="Navbar_right">
+                <li style="float:right;"><a href="../PHP/Log_in.php">Log in</a></li>
+                <!-- <li style="float:right;"><a href=""><img src="../Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>                                         Moet worden aangepast als je bent ingelogd bent -->
+                <li style="float: right;"><a href="" class="Shopping_cart"><i class='fa fa-shopping-cart' style='color:#939393; font-size: 30px; margin-top: 4px;'></i></a></li>
+                <li style="float: right;">
+                    <form action="action.php" class="Search" >
+                        <input type="text" placeholder="Search" class="Search_bar">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </li>
+            </div>
+        </ul>
+        <div id="Navigation_mobile">
+            <a href="javascript:void(0);" class="icon hamburgericon" onclick="showTHINGIEYESPLEASAE()">
+                <i class="fa fa-bars"></i></a>
+                <a class="On_hover_off">Products</a>
+                <div class="Shopping_cart_mobile">   
+                    <a href="" class="Shopping_cart_mobile"><i class='fa fa-shopping-cart' style='color:#939393;'></i></a>
+                </div>
+                <div class="Avater_mobile">
+                    <a href="" class="Avatar_mobile"><img src="Pictures/index/Basic_profilepicture.png" alt="Profiel foto"></a>
+                </div>
+
+            <script>
+                function showTHINGIEYESPLEASAE(){
+                var menu = document.getElementById('linkies')
+                if (menu.style.display === 'block'){
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block'
+                    }
+                }
+            </script>
+        
+        </div>
+        <div id="linkies">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Dishes.html">Dishes</a></li>
+            <li><a href="About_us.html">About us</a></li>
+        </div>
+    </div>
+    <div class="Subscription-container">
+        
+        
+        <div class="Subscription-title">
+            <p>Subscription</p>
+        </div>
+        <div class="Subscription-text">
+            <p>
+                Appart from conventional products Byte by Byte also offers meal boxes. 
+                These boxes are composed of regional products. Which are grown by local farmers and are mostly seasonal.
+                This means that we have a variety during each season. By keeping the fruits and vegetables seasonal we try
+                to minimize emission whilest maximizing the autenticity and experience of localy grown vegetables.
+            </p>
+            <p>
+                If you whish to subscribe to this service you can do this below. You can chose for how many people you would
+                like to get a box, how often you want a box and what type of box you want e.g. vegetarian, with meat or fish.
+            </p>
+                
+                
+                
+        </div>    
+        <div class="Rows">
+            <div class="Row-1">
+                <p style="margin-top: -2px">For how many people would you like a box?</p>
+            </div>
+            <div class="Row-1">
+                <select class="Dropdown" name="" onChange="this.name = this.value; document.getDDAll.submit()">
+                    <option  value="Short">2</option>
+                    <option  value="Medium">3</option>
+                    <option  value="Long">4</option>
+                    <option  value="Long">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="Rows">
+            <div class="Row-2">
+                <p style="margin-top: -2px">How often would you like to recive a box?</p>
+            </div>
+            <div class="Row-2">
+                <select class="Dropdown" name="" onChange="this.name = this.value; document.getDDAll.submit()">
+                    <option  value="Short">1 per month</option>
+                    <option  value="Medium">2 per month</option>
+                    <option  value="Long">4 per month</option>
+                    <option  value="Long">8 per month</option>
+                </select>
+            </div>
+        </div>
+        <div class="Rows">
+            <div class="Row-3">
+                <p style="margin-top: -2px">What type of meals would you like?</p>
+            </div>
+            <div class="Row-3">
+                <select class="Dropdown" name="" onChange="this.name = this.value; document.getDDAll.submit()">
+                    <option  value="Short">Vegan</option>
+                    <option  value="Medium">With meat and fish</option>
+                    <option  value="Long">Only with meat</option>
+                    <option  value="Long">Only with fish</option>
+                </select>
+            </div>
+        </div>
+        <div class="Rows">
+            <div class="Row-4">
+                <p style="margin-top: -2px">What type of meals would you like?</p>
+            </div>
+            <div class="Row-4">
+                <select class="Dropdown" name="" onChange="this.name = this.value; document.getDDAll.submit()">
+                    <option  value="Short">monthly</option>
+                    <option  value="Medium">quarterly</option>
+                    <option  value="Long">yearly</option>
+                </select>
+            </div>
+        </div>
+        <div class="Row-4">
+            <a><button type="button" class="Button-subscribe"><a class="Test" href="Shoppingcart.html">Subscribe</a></button></a>     
+        </div>
+    </div>
+
+</body>
+</html>
