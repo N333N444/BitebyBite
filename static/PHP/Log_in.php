@@ -12,16 +12,16 @@
     <div class="index">
         <ul id="Navigation_desktop">
             <div class="Navbar_left">
-                <li><a href="../index.html"><img src="../Pictures/index/leeg_logo.png" class="Logo"></a></li>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../HTML/Recipes.html">Recipes</a></li>
-                <li><a href="../HTML/Dishes.html">Dishes</a></li>
-                <li><a href="../HTML/About_us.html">About us</a></li>
+                <li><a href="../../index.html"><img src="../Pictures/index/leeg_logo.png" class="Logo"></a></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../templates/Products.html">Recipes</a></li>
+                <li><a href="../../templates/Dishes.html">Dishes</a></li>
+                <li><a href="../../templates/About_us.html">About us</a></li>
             </div>
             <div class="Navbar_right">
                 <li style="float:right;"><a class="Navigation_desktop_active" href="Log_in.php">Log in</a></li>
                 <!-- <li style="float:right;"><a href=""><img src="../Pictures/index/Basic_profilepicture.png" class="Avatar"></a></li>                                         Moet worden aangepast als je bent ingelogd bent-->
-                <li style="float: right;"><a href="" class="Shopping_cart"><i class='fa fa-shopping-cart' style='color:#939393; font-size: 30px; margin-top: 4px;'></i></a></li>
+                <li style="float: right;"><a href="../../templates/Shoppingcart.html" class="Shopping_cart"><i class='fa fa-shopping-cart' style='color:#939393; font-size: 30px; margin-top: 4px;'></i></a></li>
                 <li style="float: right;">
                     <form action="action.php" class="Search" >
                         <input type="text" placeholder="Search" class="Search_bar">
