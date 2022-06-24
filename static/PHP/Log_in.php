@@ -14,7 +14,7 @@
             <div class="Navbar_left">
                 <li><a href="../../index.html"><img src="../Pictures/index/leeg_logo.png" class="Logo"></a></li>
                 <li><a href="../../index.html">Home</a></li>
-                <li><a href="../../templates/Products.html">Recipes</a></li>
+                <li><a href="../../templates/Products.html">Products</a></li>
                 <li><a href="../../templates/Dishes.html">Dishes</a></li>
                 <li><a href="../../templates/About_us.html">About us</a></li>
             </div>
