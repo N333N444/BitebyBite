@@ -207,11 +207,13 @@
             updateDisplay(++counterVal);
             DictionaryIngr(counterVal);
             DictionaryExtra(counterVal);
+            let Variable = counterVal
             }
             function OppositeClick() {
             updateDisplay(--counterVal);
             DictionaryIngr(counterVal);
             DictionaryExtra(counterVal);
+            let Variable = counterVal
             }
             function updateDisplay(val) {
             if (val == 1)
@@ -235,7 +237,7 @@
                 document.getElementById("Ingredients_text2").innerHTML = EmptyList.join("");
                 EmptyList = [];
             }
-
+            
     </script>
     
 </body>
